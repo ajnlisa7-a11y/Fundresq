@@ -9,10 +9,14 @@ export const metadata: Metadata = {
   description: 'Lost or stolen cryptocurrency? Fundresq traces transaction histories, identifies where funds moved, and produces clear evidence reports for police, lawyers, and exchanges.',
   icons: {
     icon: [
-      { url: '/logo.png', href: '/logo.png' },
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    shortcut: '/icon.png',
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -24,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
