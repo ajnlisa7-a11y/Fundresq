@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 const REPORTS = [
   {
-    id: "LRX-INT-2024-06",
+    id: "FRQ-INT-2024-06",
     title: "Heuristic Tracing of Mixer Obfuscation",
     category: "Technical Briefing",
     date: "June 2024",
@@ -26,7 +26,7 @@ const REPORTS = [
     topics: ["Cluster Analysis", "Heuristic Mapping", "Tornado Cash Audits"]
   },
   {
-    id: "LRX-INT-2024-05",
+    id: "FRQ-INT-2024-05",
     title: "Social Engineering in DeFi Liquidity Schemes",
     category: "Institutional Risk",
     date: "May 2024",
@@ -35,7 +35,7 @@ const REPORTS = [
     topics: ["Grooming Vectors", "Smart Contract Audit", "OSINT Tracking"]
   },
   {
-    id: "LRX-INT-2024-04",
+    id: "FRQ-INT-2024-04",
     title: "Hardware Vault Side-Channel Vulnerabilities",
     category: "Forensic Audit",
     date: "April 2024",
