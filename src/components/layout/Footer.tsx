@@ -24,9 +24,9 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
           </div>
           <Button
             onClick={onOpenIntake}
-            className="bg-[#E15D44] text-[#090B0C] hover:bg-[#F0836D] font-bold text-xs uppercase tracking-widest px-8 h-12 shadow-xl shadow-[#E15D44]/20 rounded-lg shrink-0 transition-colors"
+            className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-8 h-12 shadow-xl shadow-[#E15D44]/20 rounded-lg shrink-0 transition-colors"
           >
-            Start a Confidential Case Review
+            Tell Us What Happened
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>
@@ -47,15 +47,15 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
           {/* Investigations */}
           <div className="space-y-3 font-mono">
             <h5 className="text-[11px] font-bold text-[#F2EFE9] uppercase tracking-widest">
-              Scam Tracing
+              Scams We Investigate
             </h5>
             <ul className="space-y-2.5 text-[#9FA3A3]">
-              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Investment Scams</Link></li>
-              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Romance Scams</Link></li>
-              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Stolen Cryptocurrency</Link></li>
-              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Fake Trading Platforms</Link></li>
-              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Wallet Hacks & Drainers</Link></li>
-              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Other Crypto Incidents</Link></li>
+              <li><Link href="/scams/investment-scams" className="hover:text-[#E15D44] transition-colors">Investment Scams</Link></li>
+              <li><Link href="/scams/romance-scams" className="hover:text-[#E15D44] transition-colors">Romance Scams</Link></li>
+              <li><Link href="/scams/fake-trading-platforms" className="hover:text-[#E15D44] transition-colors">Fake Trading Platforms</Link></li>
+              <li><Link href="/scams/crypto-scams" className="hover:text-[#E15D44] transition-colors">Crypto Scams & Fraud</Link></li>
+              <li><Link href="/scams/wallet-hacks" className="hover:text-[#E15D44] transition-colors">Wallet Hacks & Drainers</Link></li>
+              <li><Link href="/scams/stolen-crypto" className="hover:text-[#E15D44] transition-colors">Stolen Cryptocurrency</Link></li>
             </ul>
           </div>
 
@@ -73,16 +73,16 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
             </ul>
           </div>
 
-          {/* Professional & Institutional */}
+          {/* Professional Services */}
           <div className="space-y-3 font-mono">
             <h5 className="text-[11px] font-bold text-[#F2EFE9] uppercase tracking-widest">
-              Institutional
+              Investigation Services
             </h5>
             <ul className="space-y-2.5 text-[#9FA3A3]">
-              <li><Link href="#services" className="hover:text-[#E15D44] transition-colors">Legal Counsel Support</Link></li>
-              <li><Link href="#services" className="hover:text-[#E15D44] transition-colors">Insolvency & Asset Discovery</Link></li>
-              <li><Link href="#services" className="hover:text-[#E15D44] transition-colors">Exchange Freeze Packets</Link></li>
-              <li><Link href="#global" className="hover:text-[#E15D44] transition-colors">Cross-Border Jurisdictions</Link></li>
+              <li><Link href="/services/crypto-tracing" className="hover:text-[#E15D44] transition-colors">Crypto Tracing</Link></li>
+              <li><Link href="/services/wallet-investigation" className="hover:text-[#E15D44] transition-colors">Wallet Investigation</Link></li>
+              <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Forensic Evidence Reports</Link></li>
+              <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Exchange Freeze Packets</Link></li>
               <li><a href="mailto:investigations@fundresq.com" className="hover:text-[#E15D44] transition-colors">Direct Desk: investigations@fundresq.com</a></li>
             </ul>
           </div>

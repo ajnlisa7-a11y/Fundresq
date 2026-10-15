@@ -172,7 +172,7 @@ export function ReportDeliverables({ onOpenIntake }: { onOpenIntake: () => void 
             The Investigation Report
           </div>
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
-            A clear record of what we find.
+            See what happened to your funds.
           </h2>
           <p className="text-base md:text-lg text-[#9FA3A3] leading-relaxed max-w-2xl mx-auto font-normal">
             At the end of an investigation, you receive a report explaining the transaction trail, key findings and relevant evidence.
@@ -270,7 +270,7 @@ export function ReportDeliverables({ onOpenIntake }: { onOpenIntake: () => void 
                     onClick={onOpenIntake}
                     className="w-full sm:w-auto bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-6 h-10 rounded-lg shadow-lg shadow-[#E15D44]/20 transition-colors"
                   >
-                    Start a Case Review
+                    Tell Us What Happened
                     <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                   </Button>
                 </div>

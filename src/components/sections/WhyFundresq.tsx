@@ -35,8 +35,8 @@ export function WhyFundresq({ onOpenIntake }: { onOpenIntake: () => void }) {
             Our Standard
           </span>
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
-            Complex transactions need <br />
-            <span className="text-[#E15D44] italic">careful investigation.</span>
+            Crypto can move quickly. <br />
+            <span className="text-[#E15D44] italic">We follow the trail.</span>
           </h2>
           <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed max-w-2xl mx-auto">
             No guesswork and no false promises. We reconstruct the transaction trail so you have the verifiable facts.
@@ -72,7 +72,7 @@ export function WhyFundresq({ onOpenIntake }: { onOpenIntake: () => void }) {
             onClick={onOpenIntake}
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-8 h-12 shadow-xl shadow-[#E15D44]/20 rounded-lg transition-colors"
           >
-            Start a Confidential Case Review
+            Tell Us What Happened
             <ArrowRight className="w-3.5 h-3.5 ml-2" />
           </Button>
         </div>

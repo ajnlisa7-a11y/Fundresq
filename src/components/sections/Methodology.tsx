@@ -138,7 +138,7 @@ export function Methodology({ onOpenIntake }: MethodologyProps) {
             onClick={onOpenIntake}
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-6 h-11 shrink-0 shadow-lg shadow-[#E15D44]/20 transition-colors"
           >
-            Start Case Review
+            Tell Us What Happened
             <ArrowRight className="w-3.5 h-3.5 ml-2" />
           </Button>
         </div>

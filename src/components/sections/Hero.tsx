@@ -12,7 +12,7 @@ interface HeroProps {
 
 export function Hero({ onOpenIntake }: HeroProps) {
   const [quickTx, setQuickTx] = useState('');
-  const { url: heroBgUrl, onError: onHeroBgError } = useSyncedAsset('hero-bg.png', '/hero-bg.png');
+  const heroPhotoUrl = '/images/hero-investigation.jpg';
 
   const handleQuickSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,22 +20,19 @@ export function Hero({ onOpenIntake }: HeroProps) {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-[#090B0C] border-b border-[#252B2F] overflow-hidden">
-      {/* Dynamic Synced Hero Background */}
-      {heroBgUrl && (
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          <img
-            src={heroBgUrl}
-            alt="Forensic Operations Background"
-            className="w-full h-full object-cover object-center opacity-30 md:opacity-35 scale-[1.02] transition-opacity duration-700"
-            onError={onHeroBgError}
-          />
-          {/* Studio Shadow Gradient Masks for Ultra-Clean Text Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#090B0C] via-[#090B0C]/75 to-[#090B0C]/85" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#090B0C]/90 via-transparent to-[#090B0C]/90" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,11,12,0.3)_0%,rgba(9,11,12,0.92)_100%)]" />
-        </div>
-      )}
+    <section className="relative pt-36 pb-24 md:pt-48 md:pb-32 bg-[#090B0C] border-b border-[#252B2F] overflow-hidden">
+      {/* Editorial Investigative Environment Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <img
+          src={heroPhotoUrl}
+          alt="Professional Blockchain Investigation Environment"
+          className="w-full h-full object-cover object-center opacity-25 md:opacity-30 scale-[1.02] transition-opacity duration-700"
+        />
+        {/* Studio Shadow Gradient Masks for Ultra-Clean Text Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#090B0C] via-[#090B0C]/80 to-[#090B0C]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#090B0C]/95 via-[#090B0C]/50 to-[#090B0C]/95" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,11,12,0.4)_0%,rgba(9,11,12,0.95)_100%)]" />
+      </div>
 
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-20 z-[1]">

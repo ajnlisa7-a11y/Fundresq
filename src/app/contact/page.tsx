@@ -119,8 +119,8 @@ export default function ContactPage() {
               Confidential Review
             </div>
             <h1 className="text-3xl md:text-6xl font-headline font-bold mb-4 tracking-tight">
-              Start a Confidential <br />
-              <span className="text-[#E15D44] italic">Case Review.</span>
+              Tell Us What <br />
+              <span className="text-[#E15D44] italic">Happened.</span>
             </h1>
             <p className="text-sm md:text-base text-[#9FA3A3] max-w-xl mx-auto leading-relaxed">
               Tell us what happened. We look at the public blockchain records, determine where your funds moved, and provide clear written reports that police and lawyers can use.

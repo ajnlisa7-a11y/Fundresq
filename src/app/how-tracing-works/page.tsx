@@ -289,7 +289,7 @@ export default function HowTracingWorksPage() {
               onClick={() => setIsIntakeOpen(true)}
               className="bg-[#E15D44] text-[#090B0C] hover:bg-[#F0836D] font-bold text-xs uppercase tracking-widest px-8 h-12 rounded-lg shadow-lg shadow-[#E15D44]/20 transition-all"
             >
-              Start Confidential Review
+              Tell Us What Happened
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             

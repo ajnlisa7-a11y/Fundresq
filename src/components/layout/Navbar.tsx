@@ -17,12 +17,12 @@ export function Navbar({ onOpenIntake }: NavbarProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const scamTypes = [
-    { label: 'Investment Scams', href: '/#what-happened' },
-    { label: 'Romance Scams', href: '/#what-happened' },
-    { label: 'Crypto Scams', href: '/#what-happened' },
-    { label: 'Stolen Cryptocurrency', href: '/#what-happened' },
-    { label: 'Wallet Hacks', href: '/#what-happened' },
-    { label: 'Fake Trading Platforms', href: '/#what-happened' },
+    { label: 'Investment Scams', href: '/scams/investment-scams' },
+    { label: 'Romance Scams', href: '/scams/romance-scams' },
+    { label: 'Fake Trading Platforms', href: '/scams/fake-trading-platforms' },
+    { label: 'Crypto Scams', href: '/scams/crypto-scams' },
+    { label: 'Wallet Hacks', href: '/scams/wallet-hacks' },
+    { label: 'Stolen Cryptocurrency', href: '/scams/stolen-crypto' },
   ];
 
   // Close desktop dropdown on outside click

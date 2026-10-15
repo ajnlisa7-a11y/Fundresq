@@ -36,7 +36,7 @@ export function TrustBar() {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-6">
-            Investigation before assumption.
+            We follow the evidence.
           </h2>
           
           <p className="text-base md:text-lg text-[#9FA3A3] leading-relaxed max-w-2xl mx-auto font-normal">

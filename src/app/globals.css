@@ -169,6 +169,15 @@
   100% { left: 110%; opacity: 0; }
 }
 
+@keyframes trail-flow {
+  0% { stroke-dashoffset: 48; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-trail-flow {
+  animation: trail-flow 2s linear infinite;
+}
+
 /* Intelligence Motion Classes */
 .network-line {
   fill: none;

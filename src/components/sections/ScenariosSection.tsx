@@ -1,6 +1,7 @@
 'use client';
 
-import { TrendingDown, UserX, ShieldAlert, ArrowRight } from 'lucide-react';
+import { TrendingDown, UserX, ShieldAlert, ArrowRight, ShieldCheck, FileCheck } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface ScenariosSectionProps {
   onOpenIntake: () => void;
@@ -47,14 +48,14 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
   ];
 
   return (
-    <section id="scenarios" className="py-24 md:py-32 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
+    <section id="scenarios" className="py-28 md:py-36 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <span className="text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
             Case Examples
           </span>
-          <h2 className="text-3xl sm:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
             Examples of cases we investigate
           </h2>
           <p className="text-base sm:text-lg text-[#9FA3A3] font-normal max-w-2xl mx-auto leading-relaxed">
@@ -69,7 +70,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
             return (
               <div
                 key={c.id}
-                className="p-8 md:p-9 rounded-2xl bg-[#111416] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+                className="p-8 md:p-10 rounded-2xl bg-gradient-to-b from-[#111416] via-[#111416] to-[#0c0e10] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5 hover:shadow-[0_15px_45px_rgba(225,93,68,0.18)]"
               >
                 <div>
                   {/* Top Bar */}
@@ -133,6 +134,45 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
               </div>
             );
           })}
+        </div>
+
+        {/* Professional Review Feature: Real Team & Legal Collaboration */}
+        <div className="max-w-6xl mx-auto mb-16 rounded-3xl bg-gradient-to-b from-[#111416] via-[#111416] to-[#0c0e10] border border-[#252B2F] overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+            <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[420px] overflow-hidden">
+              <img
+                src="/images/team-reviewing-findings.jpg"
+                alt="Legal counsel and forensic investigators reviewing case findings and ledger diagrams"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-[#111416]/30 to-[#111416]" />
+            </div>
+
+            <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#191D20] border border-[#252B2F] text-[#E15D44] text-[10px] font-mono font-bold tracking-widest uppercase">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#61B58A]" />
+                Professional Standard
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-tight">
+                Reports built for police, lawyers, and exchanges.
+              </h3>
+
+              <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
+                Raw transaction hashes don't freeze accounts. Clear, verified documentation does. Our investigators assemble findings into court-admissible reports that solicitors, police fraud desks, and exchange compliance teams can immediately act upon.
+              </p>
+
+              <div className="pt-2">
+                <Button
+                  onClick={onOpenIntake}
+                  className="w-full sm:w-auto h-12 px-7 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/20 rounded-lg transition-colors"
+                >
+                  Tell Us What Happened
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Disclaimer Note */}

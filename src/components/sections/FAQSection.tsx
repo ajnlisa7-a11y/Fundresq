@@ -34,7 +34,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-[#111416] border-b border-[#252B2F] relative overflow-hidden">
+    <section id="faq" className="py-28 md:py-36 bg-[#111416] border-b border-[#252B2F] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <span className="text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
