@@ -20,8 +20,8 @@ export function TrustBar() {
       icon: FileSpreadsheet,
     },
     {
-      title: 'Explain the next step',
-      desc: 'We help you understand what the findings mean and what options may be available.',
+      title: 'Recover your scam funds',
+      desc: 'We take direct action to track down recipient accounts and recover your lost cryptocurrency.',
       icon: FileCheck2,
     },
   ];

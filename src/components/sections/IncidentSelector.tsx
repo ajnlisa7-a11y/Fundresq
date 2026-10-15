@@ -30,8 +30,8 @@ export const INCIDENT_TYPES = [
     buttonLabel: 'Get help →',
     timelineSpeed: 'Act quickly (first 72 hours)',
     viability: 'Clear blockchain trail',
-    guidance: 'We trace the stolen coins from your wallet through every intermediate address. If the thief moved funds across network bridges or sent them to a crypto exchange to cash out, we pinpoint those deposit accounts so you have verified records for police and exchange fraud desks.',
-    actionText: 'Get Help With Stolen Crypto',
+    guidance: 'We trace the stolen coins from your wallet through every intermediate address, network bridges, and recipient endpoints to take direct action and recover your scam funds.',
+    actionText: 'Recover Stolen Crypto',
     checklist: [
       'Your wallet address (where funds were sent from)',
       'The transaction ID (TxID) of the unauthorized transfer',
@@ -45,9 +45,9 @@ export const INCIDENT_TYPES = [
     icon: TrendingDown,
     buttonLabel: 'Get help →',
     timelineSpeed: 'Time-sensitive',
-    viability: 'Traces to exchange cash-outs',
-    guidance: 'Fraudulent investment platforms often pretend you are making profits while quietly moving your crypto into their own accounts. We trace where your deposits actually went, proving what happened and identifying where the money ended up.',
-    actionText: 'Get Help With Investment Scam',
+    viability: 'Direct scam fund recovery',
+    guidance: 'Fraudulent investment platforms often pretend you are making profits while quietly moving your crypto into their own accounts. We trace where your deposits actually went, proving what happened and identifying where the money ended up to initiate recovery.',
+    actionText: 'Recover Investment Scam Funds',
     checklist: [
       'All deposit transaction IDs (TxID) and dates',
       'The website URL and any chat messages from the platform',
@@ -62,8 +62,8 @@ export const INCIDENT_TYPES = [
     buttonLabel: 'Get help →',
     timelineSpeed: 'Act quickly',
     viability: 'Multi-hop network tracing',
-    guidance: 'Romance and relationship scams (often called pig-butchering) involve fraudsters building trust before directing victims to fake crypto investment portals. We follow the movement of your funds through intermediary wallets to identify the exchange deposit accounts where they cash out.',
-    actionText: 'Get Help With Romance Scam',
+    guidance: 'Romance and relationship scams involve fraudsters building trust before directing victims to fake crypto investment portals. We follow the movement of your funds through intermediary wallets to identify destination endpoints and take direct action to recover your scam funds.',
+    actionText: 'Recover Romance Scam Funds',
     checklist: [
       'Wallet addresses and transaction hashes (TxIDs) of your transfers',
       'The website URL or platform names provided by the contact',
@@ -78,8 +78,8 @@ export const INCIDENT_TYPES = [
     buttonLabel: 'Get help →',
     timelineSpeed: 'Urgent',
     viability: 'Direct wallet tracking',
-    guidance: 'When a wallet is compromised by a malicious permit or unauthorized private key access, funds are often quickly swept. We trace the destination addresses and isolate whether remaining accounts or tokens are at risk.',
-    actionText: 'Get Help With Compromised Wallet',
+    guidance: 'When a wallet is compromised by a malicious permit or unauthorized private key access, funds are often quickly swept. We trace the destination addresses and coordinate swift recovery actions to reclaim your assets.',
+    actionText: 'Recover Drained Wallet Funds',
     checklist: [
       'Your affected wallet address',
       'Transaction IDs of the unexpected transfers',
@@ -94,8 +94,8 @@ export const INCIDENT_TYPES = [
     buttonLabel: 'Start an investigation →',
     timelineSpeed: 'Flexible schedule',
     viability: 'Complete historical timeline',
-    guidance: 'We analyze any target wallet address or transaction to see where its money came from, which other wallets it communicates with, and which services it uses. You receive an easy-to-understand breakdown of its financial activity.',
-    actionText: 'Start an Investigation',
+    guidance: 'We analyze any target wallet address or transaction to see where its money came from, which other wallets it communicates with, and which services it uses. You receive an easy-to-understand breakdown to support direct asset recovery.',
+    actionText: 'Start Scam Fund Recovery',
     checklist: [
       'The public wallet address or transaction hash you want investigated',
       'The date range or specific transactions in question',
@@ -110,8 +110,8 @@ export const INCIDENT_TYPES = [
     buttonLabel: 'Review the transaction →',
     timelineSpeed: 'Standard review',
     viability: 'On-chain verification',
-    guidance: 'If you sent cryptocurrency to an incorrect recipient, wrong network, or unsupported contract address, we inspect the ledger to confirm where the assets currently reside and clarify whether recovery through the receiving platform is possible.',
-    actionText: 'Review the Transaction',
+    guidance: 'If you sent cryptocurrency to an incorrect recipient, wrong network, or unsupported contract address, we inspect the ledger to confirm where the assets currently reside and execute direct recovery with the receiving platform.',
+    actionText: 'Recover Diverted Assets',
     checklist: [
       'Sending wallet address',
       'Receiving address you intended or entered',
@@ -126,11 +126,11 @@ export const INCIDENT_TYPES = [
     buttonLabel: 'Professional enquiries →',
     timelineSpeed: 'Priority intake',
     viability: 'Formal forensic affidavit',
-    guidance: 'We work directly with solicitors, liquidators, corporate boards, and law enforcement units. We provide clear technical evidence packets, transaction chronologies, and expert declarations to support court applications and subpoenas.',
-    actionText: 'Submit Professional Enquiry',
+    guidance: 'We work directly with corporate counsel, liquidators, and compliance units. We provide clear technical evidence packets, transaction chronologies, and expert declarations to execute the direct recovery of corporate or client funds.',
+    actionText: 'Initiate Fund Recovery Matter',
     checklist: [
       'Firm or agency name and matter reference',
-      'Immediate requirement (e.g. freezing order evidence, formal statement)',
+      'Immediate requirement (e.g. recovery claim evidence, formal statement)',
       'List of relevant transaction hashes and wallet addresses'
     ]
   }

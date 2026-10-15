@@ -12,7 +12,7 @@ interface HeroProps {
 
 export function Hero({ onOpenIntake }: HeroProps) {
   const [quickTx, setQuickTx] = useState('');
-  const heroPhotoUrl = '/images/hero-investigation.jpg';
+  const { url: heroPhotoUrl, onError: onHeroError } = useSyncedAsset('hero-investigation.jpg', '/images/hero-investigation.jpg');
 
   const handleQuickSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,9 +24,10 @@ export function Hero({ onOpenIntake }: HeroProps) {
       {/* Editorial Investigative Environment Background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <img
-          src={heroPhotoUrl}
+          src={heroPhotoUrl || '/images/hero-investigation.jpg'}
           alt="Professional Blockchain Investigation Environment"
           className="w-full h-full object-cover object-center opacity-25 md:opacity-30 scale-[1.02] transition-opacity duration-700"
+          onError={onHeroError}
         />
         {/* Studio Shadow Gradient Masks for Ultra-Clean Text Contrast */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#090B0C] via-[#090B0C]/80 to-[#090B0C]/90" />
@@ -54,18 +55,18 @@ export function Hero({ onOpenIntake }: HeroProps) {
           {/* Small Descriptor Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111416] border border-[#252B2F] text-[#E15D44] text-[10px] md:text-[11px] font-mono font-bold tracking-[0.25em] uppercase mb-6 md:mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#E15D44] animate-pulse" />
-            CRYPTO SCAM & TRANSACTION INVESTIGATIONS
+            CRYPTO TRACING & FUND RECOVERY
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-[1.05] md:leading-[1] mb-6 md:mb-8">
             Lost money to a crypto scam? <br />
-            <span className="text-[#E15D44] italic">We help trace where it went.</span>
+            <span className="text-[#E15D44] italic">We trace and recover your lost funds.</span>
           </h1>
 
           {/* Supporting Text */}
           <p className="text-base sm:text-lg md:text-xl text-[#9FA3A3] max-w-2xl mx-auto leading-relaxed font-normal mb-8 text-balance">
-            Fundresq investigates cryptocurrency scams and suspicious transactions. We trace the movement of funds, document what we find, and explain your next steps.
+            Fundresq investigates cryptocurrency fraud, traces stolen digital assets across blockchains, and takes direct action to help recover your lost cryptocurrency.
           </p>
 
           {/* CTAs */}
@@ -74,7 +75,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
               onClick={onOpenIntake}
               className="w-full sm:w-auto h-13 px-8 text-xs md:text-sm bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold uppercase tracking-widest shadow-2xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
             >
-              Tell Us What Happened
+              Start Recovery Process
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
@@ -95,7 +96,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
 
           {/* Brand Signature Line */}
           <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[#E15D44]/90 mb-8 py-1 px-3 rounded-full bg-[#111416]/80 border border-[#252B2F]">
-            Follow the funds. Establish the facts.
+            Trace the trail. Recover the funds.
           </div>
 
           {/* Confidentiality note */}
@@ -113,7 +114,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
                 type="text"
                 value={quickTx}
                 onChange={(e) => setQuickTx(e.target.value)}
-                placeholder="Enter a transaction ID (TxID) or wallet address to review..."
+                placeholder="Enter a transaction ID (TxID) or wallet address to start recovery review..."
                 className="w-full bg-[#090B0C] border border-[#252B2F] rounded-lg pl-10 pr-4 py-3 text-xs font-mono text-[#F2EFE9] placeholder:text-[#9FA3A3]/50 focus:outline-none focus:border-[#E15D44]"
               />
             </div>
@@ -121,14 +122,14 @@ export function Hero({ onOpenIntake }: HeroProps) {
               type="submit"
               className="w-full sm:w-auto h-11 px-6 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-wider shrink-0 rounded-lg transition-colors"
             >
-              Check My Case
+              Check My Recovery Case
             </Button>
           </form>
           <div className="flex items-center justify-between mt-3 pt-3 border-t border-[#252B2F] text-[10px] font-mono text-[#9FA3A3]">
             <span className="flex items-center gap-1.5">
               <Lock className="w-3 h-3 text-[#E15D44]" /> Strictly confidential intake
             </span>
-            <span>Independent Blockchain Tracing</span>
+            <span>Direct Blockchain Recovery</span>
           </div>
         </div>
       </div>

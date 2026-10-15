@@ -28,6 +28,35 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        {/* Automatic Chunk Load Recovery for CDN timeouts & deployment updates */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined') {
+                window.addEventListener('error', function(event) {
+                  var msg = event && event.message ? event.message : '';
+                  var isChunkError = (
+                    msg.indexOf('ChunkLoadError') !== -1 ||
+                    msg.indexOf('Loading chunk') !== -1 ||
+                    msg.indexOf('Failed to fetch dynamically imported module') !== -1
+                  ) || (
+                    event && event.target && event.target.tagName === 'SCRIPT' &&
+                    event.target.src && event.target.src.indexOf('/_next/static/') !== -1
+                  );
+                  if (isChunkError) {
+                    var reloadKey = 'fundresq_chunk_recovery';
+                    var lastReload = sessionStorage.getItem(reloadKey);
+                    var now = Date.now();
+                    if (!lastReload || (now - parseInt(lastReload, 10)) > 10000) {
+                      sessionStorage.setItem(reloadKey, String(now));
+                      window.location.reload();
+                    }
+                  }
+                }, true);
+              }
+            `,
+          }}
+        />
         <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />

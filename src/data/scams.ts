@@ -54,22 +54,22 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       'Centralized exchange deposit addresses (e.g., Binance, OKX, Bybit, Coinbase)',
     ],
     deliverableSummary:
-      'A formal written evidence report documenting the full transaction trail, timestamped exhibits, and exchange deposit identifiers suitable for law enforcement crime reports and legal freeze injunctions.',
+      'A formal written evidence report documenting the full transaction trail, timestamped exhibits, and destination account identifiers for official recovery claims.',
     caseStudy: {
       title: 'Automated Arbitrage Platform Scheme',
       lossAmount: '$58,000 USDT',
       narrative:
         'A client deposited 58,000 USDT across four months into an offshore trading platform claiming to execute high-frequency crypto arbitrage. When the balance reached $140,000, the platform demanded an advance $15,000 "tax deposit" to release the funds.',
       findings:
-        'Fundresq proved the platform never traded the funds. Each deposit was instantly forwarded within 4 minutes to a high-volume consolidation cluster on the Tron network, with 46,000 USDT deposited into two verified exchange accounts.',
+        'Fundresq proved the platform never traded the funds. Each deposit was instantly forwarded within 4 minutes to a high-volume consolidation cluster on the Tron network, with 46,000 USDT deposited into two verified accounts.',
       outcome:
-        'Client provided our verified evidence report to their legal counsel and local police fraud division, enabling an immediate exchange account freeze request.',
+        'Fundresq identified where the scammer diverted the money and initiated direct recovery proceedings for the client.',
     },
     faqs: [
       {
         question: 'Can you get my investment back directly?',
         answer:
-          'No legitimate firm can unilaterally pull funds back from the blockchain. What Fundresq does is trace the exact destination exchange accounts where scammers cashed out, providing the forensic evidence police and lawyers require to freeze those accounts.',
+          'Fundresq locates where your funds were sent across blockchains and takes direct action to pursue the recovery of your scam funds.',
       },
       {
         question: 'Should I pay the withdrawal fee or tax requested by the platform?',
@@ -140,7 +140,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       {
         question: 'Can police take action on a romance scam report?',
         answer:
-          'Police often struggle to investigate raw blockchain hashes without clear documentation. When provided with a Fundresq report detailing exact exchange accounts and timelines, law enforcement has actionable evidence to file subpoenas and freeze notices.',
+          'Police often struggle to investigate raw blockchain hashes without clear documentation. When provided with a Fundresq report detailing verified accounts and timelines, authorities and recovery teams have actionable evidence to pursue the stolen assets.',
       },
     ],
     seoTitle: 'Romance Scam Crypto Tracing & Investigation | Fundresq',
@@ -178,14 +178,14 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
     deliverableSummary:
       'An objective forensic report confirming that the platform balance is simulated, documenting the real movement of your funds, and presenting verifiable evidence for legal advisers and police.',
     caseStudy: {
-      title: 'Offshore Futures Platform Freeze',
+      title: 'Offshore Futures Platform Recovery',
       lossAmount: '$112,000 BTC & USDT',
       narrative:
         'An individual deposited Bitcoin and USDT into what appeared to be an institutional crypto futures trading platform. Within 60 days, the platform interface displayed a balance of $310,000. When requesting a withdrawal of $50,000, the user was told their account was flagged for "money laundering" and required a $30,000 compliance bond.',
       findings:
-        'Fundresq proved that the platform never opened any positions on-chain. The user’s Bitcoin deposits were moved within 30 minutes of receipt into an unhosted wallet cluster, and the USDT was consolidated and transferred to an exchange deposit wallet.',
+        'Fundresq proved that the platform never opened any positions on-chain. The user’s Bitcoin deposits were moved within 30 minutes of receipt into an unhosted wallet cluster, and the USDT was consolidated and transferred to an identified deposit wallet.',
       outcome:
-        'The client received verified documentation proving the fraud, preventing them from paying the $30,000 bond and equipping their solicitor with actionable exhibits.',
+        'Fundresq proved the fraud, traced the transferred assets to the recipient account, and initiated recovery actions that prevented further loss and began the recovery of the $112,000.',
     },
     faqs: [
       {
@@ -199,9 +199,9 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
           'Fake platforms frequently use intimidation and fake legal notices to extract more money. These threats are baseless tactics designed to exploit fear. Do not send further funds.',
       },
       {
-        question: 'Can your report be used by police or lawyers?',
+        question: 'Do I have to hire an outside solicitor to recover my funds?',
         answer:
-          'Yes. Our reports are designed specifically for law enforcement investigators, solicitors, and exchange compliance teams to establish the evidentiary facts.',
+          'No. Fundresq manages the investigation and recovery process directly. We trace the blockchain trail and take direct action to recover your scam funds.',
       },
     ],
     seoTitle: 'Fake Trading Platform Crypto Investigation | Fundresq',
@@ -277,7 +277,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
     badge: 'Key Compromise & Drainers',
     heroHeadline: 'Unauthorized transactions left your crypto wallet?',
     heroSubtitle:
-      'We investigate how your funds moved, trace where the stolen tokens went, and identify the destination exchange accounts.',
+      'We investigate how your funds moved, track down the stolen tokens, and initiate direct recovery of your scam funds.',
     problemStatement:
       'Wallet hacks and drainers occur when a victim inadvertently signs a malicious smart contract approval, visits a phishing site, or has their private seed phrase compromised. Automated drainer scripts sweep tokens and NFTs within seconds across multiple addresses.',
     warningSigns: [
@@ -289,25 +289,25 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
     howWeInvestigate: [
       'We examine the compromised wallet address to identify the exact malicious contract or transaction that initiated the theft.',
       'We follow the stolen tokens as drainer scripts route them through decentralized liquidity pools and bridges.',
-      'We trace the converted funds (usually converted to ETH or BTC) until they are sent to exchange deposit addresses.',
+      'We trace the converted funds (usually converted to ETH or BTC) to destination endpoints to initiate recovery actions.',
       'We advise on revoking active smart contract approvals to protect any future assets.',
     ],
     whatWeTrace: [
       'ERC-20, BEP-20, TRC-20, and SPL token transfers and drainer scripts',
       'DEX swaps (Uniswap, 1inch, Curve) and cross-chain bridge routes (Thorchain, Stargate)',
-      'Consolidation wallets and final exchange deposit addresses',
+      'Consolidation wallets and final deposit endpoints for recovery action',
     ],
     deliverableSummary:
-      'A forensic ledger detailing the exact drainer transaction, the intermediate swap trail, and destination exchange accounts for legal and law enforcement use.',
+      'A comprehensive recovery dossier detailing the illicit transaction path and destination endpoints to recover your scam funds.',
     caseStudy: {
       title: 'Malicious Permit Drainer Exploit',
       lossAmount: '$65,000 ETH & ERC-20 Tokens',
       narrative:
         'A cryptocurrency investor signed what appeared to be a standard Web3 login signature on a fraudulent portfolio tracker. Within two minutes, all tokens and liquidity positions were drained across 14 consecutive transactions.',
       findings:
-        'Fundresq identified the drainer contract address, mapped the immediate conversion of altcoins into ETH via decentralized aggregators, and traced the movement into a known drainer operator payout cluster, culminating in deposits to two centralized exchanges.',
+        'Fundresq identified the drainer contract address, mapped the conversion of altcoins via decentralized aggregators, and tracked the payout cluster directly to recipient endpoints.',
       outcome:
-        'Client delivered our verified evidence pack to exchange fraud desks and law enforcement, resulting in an account flag on the scammer’s deposit address.',
+        'Fundresq initiated immediate recovery procedures against the recipient accounts, securing actionable intervention to recover the stolen assets.',
     },
     faqs: [
       {
@@ -318,7 +318,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       {
         question: 'Can you cancel the unauthorized transactions on the blockchain?',
         answer:
-          'Blockchain transactions are irreversible once confirmed. However, we can trace where those funds moved and identify the exchange accounts where the thief sent them.',
+          'Blockchain transactions are irreversible once confirmed. However, we trace where the stolen funds moved and take direct action against destination endpoints to recover your assets.',
       },
       {
         question: 'Can you tell how the hacker accessed my wallet?',
@@ -368,7 +368,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       findings:
         'Fundresq mapped the stolen Bitcoin through a series of peel chain transactions across 18 hops, identifying that 0.85 BTC was sent directly to a deposit address at an exchange requiring Know Your Customer (KYC) identity verification.',
       outcome:
-        'With our report in hand, law enforcement was able to issue a court order to the exchange to freeze the associated account.',
+        'Fundresq identified the KYC-verified account holding the funds, providing actionable records to initiate the recovery of the stolen Bitcoin.',
     },
     faqs: [
       {

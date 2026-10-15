@@ -1,6 +1,6 @@
 'use client';
 
-import { FileSearch, CheckCheck, GitFork, FileText, ArrowRight } from 'lucide-react';
+import { FileSearch, CheckCheck, GitFork, ShieldCheck, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HowItWorksProps {
@@ -24,14 +24,14 @@ export function HowItWorks({ onOpenIntake }: HowItWorksProps) {
     {
       num: '3',
       title: 'We trace the transactions',
-      description: 'If we take the case, we investigate how the relevant cryptocurrency moved.',
+      description: 'If we take your case, we investigate how your cryptocurrency moved to locate your stolen funds.',
       icon: GitFork,
     },
     {
       num: '4',
-      title: 'You get the findings',
-      description: 'We explain what we found and provide a clear investigation report.',
-      icon: FileText,
+      title: 'Recover your funds',
+      description: 'We track down the recipient wallets and take direct action to recover your scam funds.',
+      icon: ShieldCheck,
     },
   ];
 
@@ -44,13 +44,13 @@ export function HowItWorks({ onOpenIntake }: HowItWorksProps) {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <span className="text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
-            The Process
+            The Recovery Process
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
             What happens after you contact us?
           </h2>
           <p className="text-base sm:text-lg text-[#9FA3A3] font-normal max-w-xl mx-auto leading-relaxed">
-            We've made the process simple.
+            We've made the process of recovering your scam funds simple.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export function HowItWorks({ onOpenIntake }: HowItWorksProps) {
             onClick={onOpenIntake}
             className="h-13 px-9 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/20 rounded-lg group transition-colors"
           >
-            Tell Us What Happened
+            Recover Your Scam Funds
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

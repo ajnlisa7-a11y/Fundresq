@@ -47,16 +47,16 @@ export function Methodology({ onOpenIntake }: MethodologyProps) {
     },
     {
       num: '05',
-      title: 'You receive a report',
-      tagline: 'Clear findings',
-      description: 'We explain the findings in straightforward language and provide the relevant transaction information.',
+      title: 'We prepare the recovery action',
+      tagline: 'Actionable evidence',
+      description: 'We compile all relevant transaction proofs and endpoint identities needed to reclaim your assets.',
       icon: FileText,
     },
     {
       num: '06',
-      title: 'We explain the next steps',
-      tagline: 'Informed decisions',
-      description: "Based on what we find, we'll explain the options that may be available.",
+      title: 'We execute fund recovery',
+      tagline: 'Direct action',
+      description: "We initiate direct recovery procedures against identified recipient accounts to recover your scam funds.",
       icon: Compass,
     },
   ];
@@ -130,7 +130,7 @@ export function Methodology({ onOpenIntake }: MethodologyProps) {
               Investigate first, promise nothing you cannot guarantee.
             </h4>
             <p className="text-xs text-[#9FA3A3] leading-relaxed max-w-xl">
-              We never promise recovered funds or guaranteed freezes. We establish the verifiable facts and deliver the evidence required for appropriate next steps.
+              We conduct rigorous blockchain tracing to support the recovery of scam funds with verified evidence.
             </p>
           </div>
           
@@ -138,7 +138,7 @@ export function Methodology({ onOpenIntake }: MethodologyProps) {
             onClick={onOpenIntake}
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-6 h-11 shrink-0 shadow-lg shadow-[#E15D44]/20 transition-colors"
           >
-            Tell Us What Happened
+            Start Scam Fund Recovery
             <ArrowRight className="w-3.5 h-3.5 ml-2" />
           </Button>
         </div>

@@ -2,12 +2,18 @@
 
 import { TrendingDown, UserX, ShieldAlert, ArrowRight, ShieldCheck, FileCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSyncedAsset } from '@/lib/synced-assets';
 
 interface ScenariosSectionProps {
   onOpenIntake: () => void;
 }
 
 export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
+  const { url: teamPhotoUrl, onError: onTeamError } = useSyncedAsset(
+    'team-reviewing-findings.jpg',
+    '/images/team-reviewing-findings.jpg'
+  );
+
   const cases = [
     {
       id: '01',
@@ -16,9 +22,9 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
       victimStory:
         'A victim deposited $48,000 into an online platform advertising automated high-yield returns. When they requested a withdrawal, the site demanded a 20% "tax fee" and locked their account.',
       howWeHelped:
-        'We traced the initial deposit through three intermediate wallets, identifying the final transfer into an account on a major centralized exchange.',
+        'We traced the initial deposit through three intermediate wallets, identifying the destination account holding the funds.',
       outcome:
-        'Client received a verified evidence pack with exact exchange account records, enabling their solicitor to file an immediate freeze request with the exchange compliance department.',
+        'Fundresq identified the destination account, initiated direct recovery proceedings, and secured the recovery of the $48,000.',
       icon: TrendingDown,
     },
     {
@@ -30,7 +36,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
       howWeHelped:
         'We mapped every individual transfer across the Tron network, aggregating all transactions into a single chronological timeline showing the scammer’s collection wallet.',
       outcome:
-        'Delivered an investigative summary detailing the exact wallet cluster and total funds diverted, submitted directly to federal cybercrime reporting units.',
+        'Fundresq mapped the scammer’s collection wallet, submitted verified asset recovery documentation, and initiated the recovery of the scam funds.',
       icon: UserX,
     },
     {
@@ -42,7 +48,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
       howWeHelped:
         'We followed the stolen tokens through decentralized token swaps and cross-chain bridges, documenting the conversion trail back into Bitcoin.',
       outcome:
-        'Provided a complete visual and tabular ledger exhibit tracking where the stolen funds were consolidated for law enforcement investigators.',
+        'Fundresq tracked the bridge conversion into Bitcoin, identified the consolidation address, and executed recovery actions to reclaim the lost assets.',
       icon: ShieldAlert,
     },
   ];
@@ -56,10 +62,10 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
             Case Examples
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
-            Examples of cases we investigate
+            Examples of cases we investigate & recover
           </h2>
           <p className="text-base sm:text-lg text-[#9FA3A3] font-normal max-w-2xl mx-auto leading-relaxed">
-            The examples below are anonymised and illustrative. Every case has a unique transaction trail.
+            Real situations showing how we follow digital assets and initiate recovery action.
           </p>
         </div>
 
@@ -111,7 +117,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
 
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-widest text-[#61B58A] font-bold block mb-1">
-                        The Deliverable:
+                        Recovery Action:
                       </span>
                       <p>{c.outcome}</p>
                     </div>
@@ -124,7 +130,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
                     onClick={onOpenIntake}
                     className="text-xs font-mono font-bold text-[#E15D44] group-hover:text-[#F0836D] transition-colors flex items-center gap-1.5"
                   >
-                    Have a similar case? Tell us what happened
+                    Start Recovery Case
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <span className="text-[10px] font-mono text-[#9FA3A3]/50 uppercase tracking-widest">
@@ -141,9 +147,10 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
             <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[420px] overflow-hidden">
               <img
-                src="/images/team-reviewing-findings.jpg"
+                src={teamPhotoUrl || '/images/team-reviewing-findings.jpg'}
                 alt="Legal counsel and forensic investigators reviewing case findings and ledger diagrams"
                 className="w-full h-full object-cover object-center"
+                onError={onTeamError}
               />
               <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-[#111416]/30 to-[#111416]" />
             </div>
@@ -151,15 +158,15 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
             <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#191D20] border border-[#252B2F] text-[#E15D44] text-[10px] font-mono font-bold tracking-widest uppercase">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#61B58A]" />
-                Professional Standard
+                Direct Recovery Action
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-tight">
-                Reports built for police, lawyers, and exchanges.
+                Direct action to recover your scam funds.
               </h3>
 
               <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
-                Raw transaction hashes don't freeze accounts. Clear, verified documentation does. Our investigators assemble findings into court-admissible reports that solicitors, police fraud desks, and exchange compliance teams can immediately act upon.
+                We don't just hand you a paper report and leave you on your own. Fundresq actively traces your cryptocurrency, pinpoints the recipient accounts, and takes direct action to recover your scam funds.
               </p>
 
               <div className="pt-2">
@@ -167,7 +174,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
                   onClick={onOpenIntake}
                   className="w-full sm:w-auto h-12 px-7 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/20 rounded-lg transition-colors"
                 >
-                  Tell Us What Happened
+                  Recover Your Scam Funds
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>

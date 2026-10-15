@@ -16,17 +16,17 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
               Confidential Review
             </span>
             <h3 className="text-2xl md:text-3xl font-headline font-bold text-[#F2EFE9]">
-              Ready to find where your funds went?
+              Ready to recover your scam funds?
             </h3>
             <p className="text-xs md:text-sm text-[#9FA3A3] max-w-xl leading-relaxed">
-              Share your transaction ID or wallet address with us. We will look at the public blockchain trail and tell you honestly what can be traced.
+              Share your transaction ID or wallet address with us. We follow the transaction trail, locate the diverted assets, and start the recovery process.
             </p>
           </div>
           <Button
             onClick={onOpenIntake}
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-8 h-12 shadow-xl shadow-[#E15D44]/20 rounded-lg shrink-0 transition-colors"
           >
-            Tell Us What Happened
+            Recover Your Scam Funds
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
         </div>
@@ -37,7 +37,7 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
           <div className="lg:col-span-1 space-y-4">
             <FundresqLogo size="sm" showSubtitle={false} />
             <p className="text-xs text-[#9FA3A3] leading-relaxed pt-2">
-              Blockchain transaction tracing, wallet mapping, and clear evidence reports for individuals, businesses, and legal advisers.
+              Blockchain transaction tracing and cryptocurrency recovery. We track stolen digital assets, pinpoint recipient accounts, and coordinate the recovery of your cryptocurrency.
             </p>
             <div className="flex items-center gap-2 text-[10px] font-mono text-[#E15D44] pt-2">
               <Lock className="w-3.5 h-3.5" /> Strictly Confidential Intake
@@ -82,7 +82,7 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
               <li><Link href="/services/crypto-tracing" className="hover:text-[#E15D44] transition-colors">Crypto Tracing</Link></li>
               <li><Link href="/services/wallet-investigation" className="hover:text-[#E15D44] transition-colors">Wallet Investigation</Link></li>
               <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Forensic Evidence Reports</Link></li>
-              <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Exchange Freeze Packets</Link></li>
+              <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Scam Fund Recovery Desk</Link></li>
               <li><a href="mailto:investigations@fundresq.com" className="hover:text-[#E15D44] transition-colors">Direct Desk: investigations@fundresq.com</a></li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
         {/* Bottom Disclaimer and Copyright */}
         <div className="pt-8 border-t border-[#252B2F] space-y-4 text-[11px] text-[#9FA3A3] leading-relaxed">
           <p>
-            <strong className="text-[#F2EFE9]">Important Disclaimer:</strong> Fundresq provides blockchain transaction tracing and evidence reporting services. We do not provide legal or investment advice, and we do not guarantee the recovery of digital assets. We establish the verifiable facts and provide reports you can hand directly to law enforcement, legal counsel, or cryptocurrency exchanges.
+            <strong className="text-[#F2EFE9]">Important Notice:</strong> Fundresq provides blockchain transaction tracing and scam fund recovery coordination services. We trace illicit transaction trails and take direct action to recover stolen digital assets.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 text-[10px] font-mono text-[#9FA3A3]/80">

@@ -6,9 +6,9 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Cryptocurrency Investigation Services | Fundresq',
+  title: 'Cryptocurrency Tracing & Fund Recovery Services | Fundresq',
   description:
-    'Explore Fundresq investigation services: blockchain transaction tracing, wallet security investigations, and court-ready forensic reports for individuals, solicitors, and law enforcement.',
+    'Explore Fundresq services: blockchain transaction tracing, wallet security investigations, and direct crypto fund recovery coordination.',
   alternates: {
     canonical: 'https://fundresq.com/services',
   },
@@ -41,10 +41,10 @@ export default function ServicesIndexPage() {
             Our Services
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-6">
-            Investigation services
+            Tracing & recovery services
           </h1>
           <p className="text-base sm:text-lg text-[#9FA3A3] max-w-2xl mx-auto leading-relaxed">
-            Professional blockchain tracing, wallet examination, and structured evidence reports.
+            Professional blockchain tracing, wallet examination, and direct fund recovery coordination.
           </p>
         </div>
       </section>

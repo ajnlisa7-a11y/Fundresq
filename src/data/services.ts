@@ -120,7 +120,7 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
       {
         question: 'Can I use this tracing report in court or with police?',
         answer:
-          'Yes. Our reports are formatted specifically as evidentiary documents suitable for law enforcement crime reports, court witness exhibits, and exchange freeze requests.',
+          'Yes. Our reports are formatted specifically as evidentiary documents suitable for formal recovery claims, dispute resolutions, and official fraud reporting.',
       },
     ],
     seoTitle: 'Cryptocurrency Tracing Services | Fundresq',
@@ -228,93 +228,93 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
   'investigation-reports': {
     slug: 'investigation-reports',
     number: '03',
-    title: 'Investigation Reports',
-    tagline: 'You receive a clear report showing what we found and the transaction trail we identified.',
-    heroHeadline: 'See what happened to your funds.',
+    title: 'Scam Fund Recovery',
+    tagline: 'We track down diverted assets and take direct action to recover your scam funds.',
+    heroHeadline: 'Recovering your scam funds.',
     heroSubtitle:
-      'We explain what we found and provide a clear investigation report that police, lawyers, and exchanges can act upon.',
+      'Fundresq traces stolen digital assets across blockchains and takes direct action to recover your lost cryptocurrency.',
     problemSolved:
-      'Police officers, solicitors, and fraud departments need a clear record of what happened, not complicated blockchain jargon. We provide structured documentation showing the verifiable facts.',
+      'Victims need direct action to recover stolen digital assets, not passive paperwork. We manage the recovery process to return your scam funds.',
     overview:
-      'A Fundresq Investigation Report brings together the evidence from your case. Written in plain English and backed by verified blockchain records, our reports are prepared for you to share with police, legal counsel, and exchange compliance teams.',
+      'Fundresq actively traces and manages the recovery of lost or stolen cryptocurrency. We combine on-chain forensic attribution with direct recovery actions to track down recipient accounts and secure the return of your assets.',
     capabilities: [
       {
-        title: 'Plain-English Incident Narrative',
+        title: 'Direct Asset Recovery Action',
         description:
-          'A clear chronological summary of the incident that non-technical investigators and judges can easily understand.',
+          'Targeted recovery actions and formal evidentiary claim submissions against identified recipient wallets and endpoints.',
       },
       {
-        title: 'Cryptographic Proof Exhibits',
+        title: 'Multi-Hop Ledger Attribution',
         description:
-          'Complete tables of verified transaction hashes, block numbers, wallet addresses, and timestamps.',
+          'Tracking stolen coins through peeled outputs, token bridges, and mixer hops directly to identifiable recipient accounts.',
       },
       {
-        title: 'Exchange Freeze Documentation',
+        title: 'End-to-End Recovery Management',
         description:
-          'Specific exchange deposit addresses and compliance packet sections formatted for immediate account freeze requests.',
+          'Managing the entire asset recovery workflow so victims do not have to navigate complicated technical hurdles alone.',
       },
       {
         title: 'Evidentiary Chain of Custody',
         description:
-          'Objective documentation adhering to forensic evidentiary principles without false claims or speculation.',
+          'Forensically unassailable transaction proof verifying exact client loss and recipient accounts.',
       },
     ],
     processSteps: [
       {
         number: '1',
-        title: 'Evidence Gathering',
-        description: 'We assemble all verified on-chain data, communications, and victim documentation.',
+        title: 'Transaction Intake',
+        description: 'We gather all wallet addresses, TxIDs, and incident records under strict confidentiality.',
       },
       {
         number: '2',
-        title: 'Forensic Synthesis',
-        description: 'Our analysts reconstruct the timeline, flow diagrams, and account attributions.',
+        title: 'Destination Mapping',
+        description: 'Our analysts trace the movement of coins directly to recipient accounts and endpoints.',
       },
       {
         number: '3',
-        title: 'Peer Review',
-        description: 'Every report is reviewed for forensic accuracy and objective evidentiary compliance.',
+        title: 'Direct Recovery Action',
+        description: 'We initiate targeted recovery actions against identified recipient wallets to secure the funds.',
       },
       {
         number: '4',
-        title: 'Report Delivery',
-        description: 'You receive the completed PDF report with filing guidance for police and lawyers.',
+        title: 'Asset Return',
+        description: 'We coordinate the recovery workflow to return verified stolen assets to client custody.',
       },
     ],
     deliverables: [
-      'Official Fundresq Forensic Investigation Report (PDF)',
-      'Executive Summary for rapid review by law enforcement detectives',
-      'High-resolution visual money flow diagram suitable for legal filings',
-      'Actionable submission guidance for police crime reporting and exchange compliance desks',
+      'Official Fund Recovery Action & Claim Filing',
+      'Forensic Blockchain Tracing Map & Account Attribution',
+      'Direct Recovery Case Representation',
+      'Verified Custodial Return Coordination',
     ],
     supportedNetworks: [
       'Multi-chain coverage across all major public blockchain networks',
     ],
     whoThisIsFor: [
-      'Victims filing formal police reports or cybercrime complaints',
-      'Solicitors preparing emergency asset freeze injunctions or Norwich Pharmacal orders',
-      'Insolvency practitioners and liquidators recovering misappropriated assets',
-      'Insurance adjusters verifying cryptocurrency loss claims',
+      'Individuals who lost crypto to investment platforms or romance scams',
+      'Victims of wallet drains, phishing hacks, or unauthorized transfers',
+      'Businesses experiencing unauthorized digital asset diversion',
+      'Victims seeking immediate direct recovery intervention',
     ],
     faqs: [
       {
-        question: 'Why do police require a formal forensic report?',
+        question: 'Do I need to hire an external solicitor to recover my funds?',
         answer:
-          'Most local police departments lack dedicated in-house blockchain forensics units. A structured Fundresq report translates technical ledger data into actionable evidence, making it straightforward for detectives to issue subpoenas to exchanges.',
+          'No. Unlike passive forensic firms that only give you a technical report and leave you to find and pay a lawyer, Fundresq is designed to manage the recovery process directly. We locate where your money went and take direct action to recover your scam funds.',
       },
       {
-        question: 'Can you guarantee that law enforcement will recover my money?',
+        question: 'How quickly should I begin the recovery process?',
         answer:
-          'No company can guarantee law enforcement action or asset recovery. However, providing a verified, professional evidence report dramatically increases the probability that police or exchange compliance desks will freeze accounts and open a formal investigation.',
+          'As quickly as possible. The sooner our team investigates your transaction trail, the faster we can locate the recipient wallets and initiate recovery actions.',
       },
       {
-        question: 'How do I submit this report to an exchange or the police?',
+        question: 'Does Fundresq charge upfront fees or guarantee 100% recovery?',
         answer:
-          'Every Fundresq report includes practical next-steps guidance detailing how to file with national cybercrime agencies, local police, and exchange compliance fraud desks.',
+          'No legitimate firm can promise a 100% recovery guarantee before inspecting blockchain ledgers. Fundresq provides clear, transparent case reviews and works aggressively to recover your scam funds.',
       },
     ],
-    seoTitle: 'Blockchain Forensic Investigation Reports | Fundresq',
+    seoTitle: 'Scam Fund Recovery Services | Fundresq',
     seoDescription:
-      'Court- and police-ready cryptocurrency investigation reports. We translate raw blockchain transactions into clear, actionable evidence for law enforcement and legal counsel.',
+      'Direct cryptocurrency and scam fund recovery services. We track stolen digital assets across blockchains and take direct action to recover your lost funds.',
   },
 };

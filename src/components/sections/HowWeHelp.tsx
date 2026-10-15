@@ -1,14 +1,20 @@
 'use client';
 
 import Link from 'next/link';
-import { Search, Compass, FileText, ArrowRight, ArrowDown, ExternalLink } from 'lucide-react';
+import { Search, Compass, ShieldCheck, ArrowRight, ArrowDown, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useSyncedAsset } from '@/lib/synced-assets';
 
 interface HowWeHelpProps {
   onOpenIntake: () => void;
 }
 
 export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
+  const { url: investigatorPhotoUrl, onError: onInvestigatorError } = useSyncedAsset(
+    'investigator-analysing-data.jpg',
+    '/images/investigator-analysing-data.jpg'
+  );
+
   const services = [
     {
       id: 'trace',
@@ -27,12 +33,12 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
       icon: Compass,
     },
     {
-      id: 'document',
-      slug: 'investigation-reports',
+      id: 'recover',
+      slug: 'crypto-tracing',
       number: '03',
-      title: 'Document the findings',
-      description: 'You receive a clear report showing what we found and the transaction trail we identified.',
-      icon: FileText,
+      title: 'Recover scam funds',
+      description: 'We take direct action to track down and recover lost cryptocurrency and scam funds.',
+      icon: ShieldCheck,
     },
   ];
 
@@ -48,7 +54,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
             How Fundresq can help
           </h2>
           <p className="text-base sm:text-lg text-[#9FA3A3] font-normal max-w-xl mx-auto leading-relaxed">
-            Simple, honest investigation services to establish the facts.
+            Direct services to locate and recover your scam funds.
           </p>
         </div>
 
@@ -89,7 +95,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                     onClick={onOpenIntake}
                     className="text-xs font-mono font-bold text-[#E15D44] hover:text-[#F0836D] transition-colors flex items-center gap-1.5"
                   >
-                    Tell Us What Happened
+                    Start Recovery
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
 
@@ -117,7 +123,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                 Real investigators examining the trail.
               </h3>
               <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
-                Automated tools can miss complex peeling chains and obfuscation methods. At Fundresq, experienced forensic specialists manually inspect transaction records, cross-network transfers, and exchange deposit endpoints.
+                Automated tools can miss complex peeling chains and obfuscation methods. At Fundresq, experienced forensic specialists manually inspect transaction records, track down illicit transfers, and execute the recovery of your scam funds.
               </p>
               <div className="flex items-center gap-4 text-xs font-mono text-[#F2EFE9]">
                 <div className="flex items-center gap-1.5">
@@ -127,16 +133,17 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                 <span>•</span>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#E15D44]" />
-                  <span>Subpoena-Ready Proof</span>
+                  <span>Direct Recovery Action</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[380px] overflow-hidden order-1 lg:order-2">
               <img
-                src="/images/investigator-analysing-data.jpg"
+                src={investigatorPhotoUrl || '/images/investigator-analysing-data.jpg'}
                 alt="Senior forensic investigator analysing cryptocurrency transaction flow charts on dual displays"
                 className="w-full h-full object-cover object-center"
+                onError={onInvestigatorError}
               />
               <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-[#090B0C]/20 to-[#090B0C]" />
             </div>
@@ -267,15 +274,15 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                 </div>
               </div>
 
-              {/* Node 3: Exchange Deposit */}
+              {/* Node 3: Recipient Endpoint */}
               <div className="w-full max-w-[280px] p-3.5 rounded-xl bg-[#191D20] border border-[#252B2F] flex items-center justify-between shadow-lg group hover:border-[#E15D44]/60 transition-colors">
                 <div>
                   <div className="text-xs font-bold text-[#F2EFE9] tracking-wider uppercase flex items-center gap-1.5">
-                    <span>EXCHANGE</span>
-                    <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#61B58A]/15 border border-[#61B58A]/30 text-[#61B58A]">KYC ACCOUNT</span>
+                    <span>RECIPIENT ENDPOINT</span>
+                    <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#61B58A]/15 border border-[#61B58A]/30 text-[#61B58A]">IDENTIFIED</span>
                   </div>
                   <div className="text-[10px] text-[#9FA3A3] mt-0.5">
-                    0x12F8...77EA · Off-Ramp
+                    0x12F8...77EA · Target Recovery Point
                   </div>
                 </div>
                 <span className="w-2.5 h-2.5 rounded-full bg-[#E15D44] shadow-[0_0_12px_#E15D44]" />
@@ -295,9 +302,9 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                 </svg>
               </div>
 
-              {/* Bottom Badge: Fundresq Follows The Transaction Trail */}
+              {/* Bottom Badge: Fundresq Recovers Your Scam Funds */}
               <div className="text-center px-5 py-2.5 rounded-xl bg-[#E15D44]/10 border border-[#E15D44]/40 text-[#E15D44] text-[11px] font-bold tracking-wider uppercase shadow-lg shadow-[#E15D44]/10">
-                FUNDRESQ FOLLOWS THE TRANSACTION TRAIL
+                FUNDRESQ RECOVERS YOUR SCAM FUNDS
               </div>
             </div>
 
@@ -308,11 +315,11 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
               </span>
 
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-tight">
-                We follow where the money went.
+                We help you recover your scam funds.
               </h3>
 
               <p className="text-base sm:text-lg text-[#9FA3A3] font-normal leading-relaxed">
-                Cryptocurrency can move through several wallets and platforms. Fundresq examines the transaction trail to help you understand what happened.
+                Cryptocurrency can move through multiple wallets and networks. Fundresq tracks down the funds and works directly to recover what was taken from you.
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -330,7 +337,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                   onClick={onOpenIntake}
                   className="w-full sm:w-auto h-13 px-8 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/25 rounded-lg transition-colors"
                 >
-                  Tell Us What Happened
+                  Recover Your Scam Funds
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>

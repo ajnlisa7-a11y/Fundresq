@@ -96,7 +96,7 @@ export function GlobalIntelligence() {
         </div>
 
         <div className="text-center text-xs text-[#9FA3A3]/80 max-w-xl mx-auto">
-          Please note: Fundresq is an independent blockchain tracing service, not a law firm. We provide clear, objective reports that you can hand directly to law enforcement, legal counsel, or crypto exchanges.
+          Please note: Fundresq focuses on tracing diverted cryptocurrency transactions and executing direct scam fund recovery actions.
         </div>
       </div>
     </section>

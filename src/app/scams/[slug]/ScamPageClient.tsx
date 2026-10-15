@@ -19,6 +19,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CaseIntakeModal } from '@/components/sections/CaseIntakeModal';
 import { ScamDetails } from '@/data/scams';
+import { useSyncedAsset } from '@/lib/synced-assets';
 
 interface ScamPageClientProps {
   scam: ScamDetails;
@@ -27,6 +28,10 @@ interface ScamPageClientProps {
 export function ScamPageClient({ scam }: ScamPageClientProps) {
   const [isIntakeOpen, setIsIntakeOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const { url: victimPhotoUrl, onError: onVictimError } = useSyncedAsset(
+    'investment-scam-victim.jpg',
+    '/images/investment-scam-victim.jpg'
+  );
 
   const handleOpenIntake = () => {
     setIsIntakeOpen(true);
@@ -92,7 +97,7 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
                 onClick={handleOpenIntake}
                 className="w-full sm:w-auto h-13 px-8 text-xs md:text-sm bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold uppercase tracking-widest shadow-2xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
               >
-                Tell Us What Happened
+                Start Recovery Case
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
 
@@ -149,9 +154,10 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
               <div className="grid grid-cols-1 md:grid-cols-12 items-center">
                 <div className="md:col-span-7 relative h-64 md:h-80 overflow-hidden">
                   <img
-                    src="/images/investment-scam-victim.jpg"
+                    src={victimPhotoUrl || '/images/investment-scam-victim.jpg'}
                     alt="Individual reviewing frozen account withdrawal alerts on a deceptive trading platform"
                     className="w-full h-full object-cover object-center"
+                    onError={onVictimError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-transparent via-[#090B0C]/20 to-[#090B0C]" />
                 </div>
@@ -160,7 +166,7 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
                     Real-World Situation
                   </span>
                   <h3 className="text-lg md:text-xl font-headline font-bold text-[#F2EFE9] leading-snug">
-                    When withdrawals freeze and demands for fees begin.
+                    When withdrawals are blocked and demands for fees begin.
                   </h3>
                   <p className="text-xs md:text-sm text-[#9FA3A3] leading-relaxed">
                     Victims typically realise something is wrong when a platform demands unexpected &ldquo;tax clearance fees&rdquo; or &ldquo;liquidity verification&rdquo; before allowing withdrawals. While the dashboard numbers are simulated, where your actual cryptocurrency moved is permanently recorded on the blockchain.
@@ -339,14 +345,14 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
               Lost money to {scam.title.toLowerCase()}?
             </h2>
             <p className="text-sm md:text-base text-[#9FA3A3] max-w-xl mx-auto leading-relaxed mb-8">
-              Share the transaction hashes or wallet address. We will review your details confidentially and let you know what can be traced on the public blockchain.
+              Share your transaction hashes or wallet address. We will trace where the cryptocurrency went, pinpoint recipient exchange accounts, and initiate recovery action.
             </p>
 
             <Button
               onClick={handleOpenIntake}
               className="h-13 px-9 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
             >
-              Tell Us What Happened
+              Start Recovery Process
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
 

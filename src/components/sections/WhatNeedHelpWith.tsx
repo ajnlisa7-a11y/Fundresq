@@ -25,7 +25,7 @@ export function WhatNeedHelpWith({ onSelectCase }: WhatNeedHelpWithProps) {
       badge: 'Trading Schemes',
       question: 'Did you send money to a fake investment or trading platform?',
       description: 'You were promised high returns, automated profits, or exclusive access, but the platform will not return your funds.',
-      buttonText: 'Get Help',
+      buttonText: 'Recover Funds',
       icon: TrendingDown,
     },
     {
@@ -35,7 +35,7 @@ export function WhatNeedHelpWith({ onSelectCase }: WhatNeedHelpWithProps) {
       badge: 'Social Engineering',
       question: 'Did someone you met online convince you to send cryptocurrency?',
       description: 'An online contact, romantic match, or acquaintance gained your trust and guided you to make transfers or deposits.',
-      buttonText: 'Get Help',
+      buttonText: 'Recover Funds',
       icon: UserX,
     },
     {
@@ -45,7 +45,7 @@ export function WhatNeedHelpWith({ onSelectCase }: WhatNeedHelpWithProps) {
       badge: 'Unauthorized Transfers',
       question: 'Was cryptocurrency taken from your wallet or account?',
       description: 'Funds were transferred out of your private wallet, custodial account, or exchange balance without your permission.',
-      buttonText: 'Get Help',
+      buttonText: 'Recover Funds',
       icon: ShieldAlert,
     },
     {
@@ -55,17 +55,17 @@ export function WhatNeedHelpWith({ onSelectCase }: WhatNeedHelpWithProps) {
       badge: 'Key Compromise',
       question: "Are there transactions from your wallet that you didn't make?",
       description: 'A malicious link, compromised seed phrase, or malicious contract drained your wallet balance across multiple transfers.',
-      buttonText: 'Get Help',
+      buttonText: 'Recover Funds',
       icon: KeyRound,
     },
     {
       id: 'unresponsive',
       pageSlug: 'fake-trading-platforms',
       title: 'Fake Trading Platform',
-      badge: 'Frozen Withdrawals',
+      badge: 'Blocked Withdrawals',
       question: "Does a platform show money in your account but won't let you withdraw it?",
       description: 'The website displays an active balance or profit, but demands additional "tax fees", "commissions", or deposits before releasing it.',
-      buttonText: 'Get Help',
+      buttonText: 'Recover Funds',
       icon: LockKeyhole,
     },
     {
@@ -75,7 +75,7 @@ export function WhatNeedHelpWith({ onSelectCase }: WhatNeedHelpWithProps) {
       badge: 'General Scam',
       question: 'Something else happened?',
       description: "Phishing emails, fake customer service imposters, fraudulent recovery agents, or business disputes.",
-      buttonText: 'Tell Us What Happened',
+      buttonText: 'Start Recovery',
       icon: HelpCircle,
     },
   ];
@@ -162,7 +162,7 @@ export function WhatNeedHelpWith({ onSelectCase }: WhatNeedHelpWithProps) {
 
         {/* Reassurance banner underneath */}
         <div className="mt-14 max-w-2xl mx-auto p-4 rounded-xl bg-[#111416]/80 border border-[#252B2F] text-center text-xs font-mono text-[#9FA3A3] flex items-center justify-center gap-2">
-          <span>🔒</span> All case inquiries are handled under strict confidentiality. We do not make false recovery promises.
+          <span>🔒</span> All case inquiries are handled under strict confidentiality. Fast, structured action to trace and recover lost assets.
         </div>
       </div>
     </section>

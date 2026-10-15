@@ -119,13 +119,13 @@ export function Navbar({ onOpenIntake }: NavbarProps) {
           </Link>
         </div>
 
-        {/* Right Action: Start a Case */}
+        {/* Right Action: Start Recovery */}
         <div className="hidden lg:flex items-center gap-4">
           <Button
             onClick={onOpenIntake}
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-6 h-11 shadow-lg shadow-[#E15D44]/20 rounded-lg group transition-all"
           >
-            Start a Case
+            Start Recovery
             <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
@@ -137,7 +137,7 @@ export function Navbar({ onOpenIntake }: NavbarProps) {
             size="sm"
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] font-bold text-[10px] uppercase tracking-wider px-3 h-8"
           >
-            Start Case
+            Start Recovery
           </Button>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -221,7 +221,7 @@ export function Navbar({ onOpenIntake }: NavbarProps) {
               }}
               className="w-full bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] font-bold text-xs uppercase tracking-widest py-3"
             >
-              Start a Case
+              Start Recovery
             </Button>
           </div>
         </div>

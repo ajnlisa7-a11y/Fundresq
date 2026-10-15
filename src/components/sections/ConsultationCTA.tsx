@@ -20,12 +20,12 @@ export function ConsultationCTA({ onOpenIntake }: { onOpenIntake: () => void }) 
           </div>
 
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-6">
-            Not sure where your crypto went? <br className="hidden sm:block" />
-            <span className="text-[#E15D44] italic">Let’s look at the transaction trail.</span>
+            Lost money to a crypto scam? <br className="hidden sm:block" />
+            <span className="text-[#E15D44] italic">We trace and recover your lost funds.</span>
           </h2>
 
           <p className="text-sm md:text-base text-[#9FA3A3] max-w-xl mx-auto leading-relaxed mb-10">
-            Share what happened and any details you have. We'll look at the transaction records, follow where funds moved, and explain what the evidence shows.
+            Share what happened and your transaction details. We track down where your money went and take direct action to recover your scam funds.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -33,7 +33,7 @@ export function ConsultationCTA({ onOpenIntake }: { onOpenIntake: () => void }) 
               onClick={onOpenIntake}
               className="w-full sm:w-auto h-13 px-9 text-xs md:text-sm bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold uppercase tracking-widest shadow-2xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
             >
-              Tell Us What Happened
+              Recover Your Scam Funds
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
@@ -49,7 +49,7 @@ export function ConsultationCTA({ onOpenIntake }: { onOpenIntake: () => void }) 
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-[10px] font-mono text-[#9FA3A3] uppercase tracking-widest pt-6 border-t border-[#252B2F]">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#61B58A]" /> No false recovery promises
+              <ShieldCheck className="w-3.5 h-3.5 text-[#61B58A]" /> Direct Recovery Action
             </span>
             <span>•</span>
             <span className="flex items-center gap-1.5">

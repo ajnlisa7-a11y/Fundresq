@@ -9,23 +9,23 @@ export function FAQSection() {
   const faqs = [
     {
       q: 'Can cryptocurrency really be traced?',
-      a: 'Yes. Major blockchains like Bitcoin, Ethereum, Tron, and Solana are permanent public ledgers. Every transaction is recorded forever. We follow the movement of funds from your wallet through any intermediate hops, token swaps, and bridges directly to the exchange deposit accounts where the recipient deposited them.',
+      a: 'Yes. Major blockchains like Bitcoin, Ethereum, Tron, and Solana are permanent public ledgers. Every transaction is recorded forever. We follow the movement of funds from your wallet through any intermediate transfers, swaps, and bridges directly to the destination accounts where the scammer diverted them.',
     },
     {
-      q: 'Can you guarantee that my stolen crypto will be recovered?',
-      a: 'No, and please be extremely wary of anyone who promises they can. No legitimate company can guarantee crypto recovery or "hack back" a wallet. What Fundresq provides is verified proof: we trace where your money went, identify destination accounts, and deliver a formal report that law enforcement, solicitors, or exchange fraud desks need to request account freezes.',
+      q: 'How does Fundresq help recover stolen cryptocurrency?',
+      a: 'We locate the diverted digital assets across blockchains and take direct action to recover your scam funds.',
     },
     {
       q: 'What information do I need to get started?',
       a: 'The most useful details are your wallet address, the transaction ID (TxID or transaction hash), and the approximate date and time. If you have emails, website links, or communications with the platform or scammer, saving those is also very helpful.',
     },
     {
-      q: 'How quickly should I start an investigation?',
-      a: 'As soon as possible. While the blockchain record is permanent and will never disappear, scammers often attempt to cash out through exchanges quickly. Tracing funds early gives you the best opportunity to provide evidence to law enforcement before assets are withdrawn.',
+      q: 'How quickly should I start the recovery process?',
+      a: 'As soon as possible. While the blockchain record is permanent, scammers often attempt to move funds quickly. Starting recovery immediately gives the best opportunity to secure and recover your scam funds.',
     },
     {
-      q: 'Can police and lawyers actually use your reports?',
-      a: 'Yes. Our reports are written specifically for non-technical readers. Instead of overwhelming police officers or lawyers with raw code, we provide clear chronological summaries, verified timelines, and exact exchange accounts ready for formal reporting or subpoena requests.',
+      q: 'Do I have to take your findings to a solicitor myself?',
+      a: 'No. Unlike passive firms that simply sell you a PDF and leave you to find and pay a solicitor, Fundresq is built to help recover your lost funds directly. We locate where your money went and take direct action to recover your scam funds.',
     },
   ];
 

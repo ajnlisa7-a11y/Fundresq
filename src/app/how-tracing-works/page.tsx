@@ -121,8 +121,8 @@ export default function HowTracingWorksPage() {
       title: 'Realistic Boundaries & Limitations',
       plainEnglish: 'What blockchain tracing can prove, and what it cannot do.',
       deepDive: [
-        'What tracing DOES: It proves the exact movement of funds, reveals intermediary wallets, establishes cluster ownership, locates exchange deposit endpoints, and creates court-admissible evidence.',
-        'What tracing CANNOT do: No private firm has a secret "hack back" button. Private non-custodial wallets cannot be frozen without legal intervention or law enforcement authority.',
+        'What tracing DOES: It proves the exact movement of funds, reveals intermediary wallets, establishes cluster ownership, locates recipient deposit endpoints, and creates verified evidence to recover your scam funds.',
+        'What tracing CANNOT do: No private firm has a secret "hack back" button. Private non-custodial wallets cannot be accessed without authorized intervention or legal execution.',
         'Anyone claiming "guaranteed recovery" or claiming they can magically reverse confirmed blockchain transactions is attempting to scam you a second time.'
       ],
       sample: 'Transparent Fact: Tracing provides the evidentiary proof needed for police and legal recovery pathways.'
@@ -132,12 +132,12 @@ export default function HowTracingWorksPage() {
       category: 'boundaries',
       tag: '08. Legal Rigour',
       icon: FileCheck,
-      title: 'Evidence Standards for Law Enforcement & Legal Counsel',
-      plainEnglish: 'Structuring findings so cybercrime units and solicitors can act immediately.',
+      title: 'Evidence Standards for Asset Recovery & Claims',
+      plainEnglish: 'Structuring findings so cybercrime units and recovery specialists can act immediately.',
       deepDive: [
         'For evidence to be actionable by law enforcement cybercrime divisions or accepted in court proceedings, it must meet strict chain-of-custody and verification standards.',
-        'Fundresq reports include RFC-3161 cryptographic timestamping, verifiable transaction hashes, exchange entity attribution, and a clear executive timeline.',
-        'This allows solicitors to apply for Norwich Pharmacal disclosure orders or Bankers Books Evidence Act applications without delay.'
+        'Fundresq reports include RFC-3161 cryptographic timestamping, verifiable transaction hashes, entity attribution, and a clear executive timeline.',
+        'This allows recovery specialists to apply for disclosure orders or banking evidence applications without delay.'
       ],
       sample: 'Chain of Custody Standard: Verifiable On-Chain Hashes + Cryptographic Timestamps + Forensic Attributions'
     }

@@ -19,14 +19,14 @@ export function InvestigationProcess({ onOpenIntake }: { onOpenIntake: () => voi
     },
     {
       step: 'Step 3',
-      title: 'Pinpoint Where Funds Landed',
-      description: 'We check destination addresses against databases of known cryptocurrency exchanges and services to identify where the person deposited the funds.',
+      title: 'Pinpoint Destination Endpoints',
+      description: 'We check destination addresses against databases of known cryptocurrency services and platforms to pinpoint where the scammer moved your assets.',
       icon: Shield,
     },
     {
       step: 'Step 4',
-      title: 'Receive a Clear Written Report',
-      description: 'You get an easy-to-read written report with dates, amounts, and destination accounts. You can hand this directly to police, a crypto exchange, or a solicitor.',
+      title: 'Recover Your Scam Funds',
+      description: 'Fundresq initiates direct recovery actions, coordinating with platforms and using verified transaction records to recover your lost funds.',
       icon: FileCheck,
     },
   ];
@@ -86,7 +86,7 @@ export function InvestigationProcess({ onOpenIntake }: { onOpenIntake: () => voi
             onClick={onOpenIntake}
             className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest px-8 h-12 shadow-lg shadow-[#E15D44]/20 rounded-lg transition-colors"
           >
-            Submit Your Transaction Details for Review
+            Start Recovering Your Scam Funds
             <ArrowRight className="w-3.5 h-3.5 ml-2" />
           </Button>
         </div>

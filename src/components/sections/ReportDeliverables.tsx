@@ -136,23 +136,23 @@ export function ReportDeliverables({ onOpenIntake }: { onOpenIntake: () => void 
     },
     {
       id: 'next_steps',
-      label: 'Suggested next steps',
-      desc: 'Clear options and guidance for reporting findings to police, an exchange, or legal counsel.',
+      label: 'Recovery action steps',
+      desc: 'Clear options and direct actions taken to recover your scam funds.',
       icon: Compass,
-      sampleTitle: '06. Recommended Next Steps',
+      sampleTitle: '06. Fund Recovery Steps',
       sampleContent: (
         <div className="p-4 rounded bg-[#111416] border border-[#252B2F] text-xs space-y-3">
           <div className="flex items-start gap-2.5 text-[#9FA3A3]">
             <span className="w-5 h-5 rounded-full bg-[#E15D44]/20 text-[#E15D44] flex items-center justify-center shrink-0 font-bold text-[10px]">1</span>
-            <span>File an official crime report with police (e.g. Action Fraud / local cybercrime unit) referencing this evidence report.</span>
+            <span>Pinpoint exact target recipient addresses and recipient platform endpoints.</span>
           </div>
           <div className="flex items-start gap-2.5 text-[#9FA3A3]">
             <span className="w-5 h-5 rounded-full bg-[#E15D44]/20 text-[#E15D44] flex items-center justify-center shrink-0 font-bold text-[10px]">2</span>
-            <span>Request that police submit an emergency preservation notice to the exchange compliance team for target account 0x12F8...77EA.</span>
+            <span>Initiate direct asset recovery coordination and fraud notices for target account 0x12F8...77EA.</span>
           </div>
           <div className="flex items-start gap-2.5 text-[#9FA3A3]">
             <span className="w-5 h-5 rounded-full bg-[#E15D44]/20 text-[#E15D44] flex items-center justify-center shrink-0 font-bold text-[10px]">3</span>
-            <span>Provide the report to legal counsel if civil disclosure or court freezing orders are being considered.</span>
+            <span>Execute recovery procedures to reclaim the identified scam funds.</span>
           </div>
         </div>
       ),
@@ -263,14 +263,14 @@ export function ReportDeliverables({ onOpenIntake }: { onOpenIntake: () => void 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="flex items-center gap-2 text-[10px] font-mono text-[#9FA3A3]">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#61B58A]" />
-                    <span>Formatted for police, exchanges & solicitors</span>
+                    <span>Formatted for direct asset recovery & claims</span>
                   </div>
 
                   <Button
                     onClick={onOpenIntake}
                     className="w-full sm:w-auto bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-6 h-10 rounded-lg shadow-lg shadow-[#E15D44]/20 transition-colors"
                   >
-                    Tell Us What Happened
+                    Recover Your Scam Funds
                     <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                   </Button>
                 </div>

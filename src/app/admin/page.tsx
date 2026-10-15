@@ -70,6 +70,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import placeholderData from '@/app/lib/placeholder-images.json';
+import { MANAGED_WEBSITE_MEDIA, WebsiteMediaItem } from '@/lib/website-media';
+import { notifyAssetUpdated, getAssetPublicUrl } from '@/lib/synced-assets';
 
 type CaseRecord = {
   id: string;
@@ -169,6 +171,8 @@ export default function AdminDashboard() {
 
   // Media Library State
   const [selectedAssetId, setSelectedAssetId] = useState<string | null>(null);
+  const [selectedMediaItem, setSelectedMediaItem] = useState<WebsiteMediaItem | null>(null);
+  const [mediaCategory, setMediaCategory] = useState<'website' | 'avatars'>('website');
   const [assetFile, setAssetFile] = useState<File | null>(null);
   const [assetPreview, setAssetPreview] = useState<string | null>(null);
   const [uploadingAsset, setUploadingAsset] = useState(false);
@@ -405,42 +409,38 @@ export default function AdminDashboard() {
   };
 
   const uploadAsset = async () => {
-    if (!assetFile || !selectedAssetId) return;
+    if (!assetFile || (!selectedAssetId && !selectedMediaItem)) return;
     setUploadingAsset(true);
 
     try {
-      const fileName = `${selectedAssetId}.png`;
+      const targetFileName = selectedMediaItem 
+        ? selectedMediaItem.fileName 
+        : `${selectedAssetId}.png`;
+
       const { error } = await supabase.storage
         .from('assets')
-        .upload(fileName, assetFile, {
+        .upload(targetFileName, assetFile, {
           upsert: true,
           contentType: assetFile.type
         });
 
       if (error) throw error;
 
-      const timestamp = Date.now().toString();
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('fundresq_assets_updated', timestamp);
-        localStorage.setItem(`fundresq_asset_${fileName}`, timestamp);
-        if (selectedAssetId === 'hero-bg') {
-          localStorage.setItem('fundresq_hero_updated', timestamp);
-        }
-        window.dispatchEvent(new Event('branding-updated'));
-      }
+      notifyAssetUpdated(targetFileName);
 
       toast({
-        title: "Media Synchronized",
-        description: `The asset '${selectedAssetId}' has been updated and synchronized across the website.`,
+        title: "Website Image Updated",
+        description: `Successfully uploaded '${selectedMediaItem?.name || selectedAssetId}' to Supabase storage. The live website is now updated.`,
       });
       setAssetFile(null);
       setAssetPreview(null);
       setSelectedAssetId(null);
+      setSelectedMediaItem(null);
     } catch (error: any) {
       toast({
         variant: "destructive",
-        title: "Media Error",
-        description: error.message,
+        title: "Upload Error",
+        description: error.message || "Ensure the 'assets' bucket exists and is Public in Supabase.",
       });
     } finally {
       setUploadingAsset(false);
@@ -674,55 +674,206 @@ export default function AdminDashboard() {
               </DialogContent>
             </Dialog>
 
+            {/* Website Images & Photography Manager Dialog */}
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="border-white/5 bg-white/5 uppercase text-[9px] font-black tracking-widest h-9">
-                  <Layers className="w-3.5 h-3.5 mr-2" /> Media Library
+                <Button variant="outline" size="sm" className="border-white/10 bg-white/5 uppercase text-[9px] font-black tracking-widest h-9 text-[#F2EFE9] hover:border-[#E15D44] hover:text-[#E15D44] transition-colors">
+                  <ImageIcon className="w-3.5 h-3.5 mr-2 text-[#E15D44]" /> Website Images
                 </Button>
               </DialogTrigger>
-              <DialogContent className="glass-card border-white/10 max-w-2xl max-h-[90vh] overflow-y-auto">
-                <DialogHeader>
-                  <DialogTitle className="text-xl font-headline font-bold uppercase tracking-tight">Technical Asset Library</DialogTitle>
-                  <DialogDescription className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Manage website imagery and forensic personnel avatars</DialogDescription>
+              <DialogContent className="glass-card border-white/10 max-w-4xl max-h-[92vh] overflow-y-auto bg-[#090B0C]/95">
+                <DialogHeader className="border-b border-[#252B2F] pb-4">
+                  <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#E15D44] font-bold">
+                    <Database className="w-3.5 h-3.5" /> Supabase Storage · Bucket: assets
+                  </div>
+                  <DialogTitle className="text-xl md:text-2xl font-headline font-bold uppercase tracking-tight text-[#F2EFE9] pt-1">
+                    Website Images & Photography Manager
+                  </DialogTitle>
+                  <DialogDescription className="text-xs text-[#9FA3A3] font-normal leading-relaxed">
+                    Upload and replace website photography. All images are stored in Supabase storage and automatically synchronized across the live website.
+                  </DialogDescription>
                 </DialogHeader>
                 
-                <div className="py-6 space-y-8">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    {placeholderData.placeholderImages.map((asset) => (
-                      <div 
-                        key={asset.id}
-                        onClick={() => setSelectedAssetId(asset.id)}
-                        className={cn(
-                          "p-4 border border-white/5 bg-white/5 cursor-pointer hover:border-primary/50 transition-all text-center space-y-3",
-                          selectedAssetId === asset.id && "border-primary bg-primary/5"
-                        )}
-                      >
-                        <div className="aspect-[4/5] bg-black/40 flex items-center justify-center relative overflow-hidden">
-                           <img 
-                             src={`${supabase.storage.from('assets').getPublicUrl(`${asset.id}.png`).data?.publicUrl || asset.imageUrl}`} 
-                             alt={asset.id} 
-                             className="object-cover w-full h-full opacity-60" 
-                             onError={(e) => {
-                               (e.target as HTMLImageElement).src = asset.imageUrl;
-                             }}
-                           />
-                           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                              <ImageIcon className="w-6 h-6 text-white opacity-20" />
-                           </div>
-                        </div>
-                        <p className="text-[8px] font-black uppercase tracking-widest">{asset.id.replace('-', ' ')}</p>
-                      </div>
-                    ))}
+                <div className="py-6 space-y-6">
+                  {/* Category Switcher */}
+                  <div className="flex items-center gap-3 border-b border-[#252B2F] pb-4">
+                    <button
+                      onClick={() => {
+                        setMediaCategory('website');
+                        setSelectedAssetId(null);
+                        setSelectedMediaItem(null);
+                        setAssetFile(null);
+                        setAssetPreview(null);
+                      }}
+                      className={cn(
+                        "text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-lg transition-all",
+                        mediaCategory === 'website'
+                          ? "bg-[#E15D44] text-[#090B0C] shadow-lg shadow-[#E15D44]/20"
+                          : "bg-[#111416] text-[#9FA3A3] hover:text-[#F2EFE9] border border-[#252B2F]"
+                      )}
+                    >
+                      Website Photography & Branding ({MANAGED_WEBSITE_MEDIA.length})
+                    </button>
+                    <button
+                      onClick={() => {
+                        setMediaCategory('avatars');
+                        setSelectedAssetId(null);
+                        setSelectedMediaItem(null);
+                        setAssetFile(null);
+                        setAssetPreview(null);
+                      }}
+                      className={cn(
+                        "text-xs font-mono font-bold uppercase tracking-wider px-4 py-2 rounded-lg transition-all",
+                        mediaCategory === 'avatars'
+                          ? "bg-[#E15D44] text-[#090B0C] shadow-lg shadow-[#E15D44]/20"
+                          : "bg-[#111416] text-[#9FA3A3] hover:text-[#F2EFE9] border border-[#252B2F]"
+                      )}
+                    >
+                      Personnel Avatars ({placeholderData.placeholderImages.length})
+                    </button>
                   </div>
 
-                  {selectedAssetId && (
-                    <div className="p-8 border border-primary/20 bg-primary/5 space-y-6 animate-in fade-in slide-in-from-top-4 duration-300">
-                      <div className="flex justify-between items-center">
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Upload Replacement for {selectedAssetId}</h4>
-                        <Button variant="ghost" size="sm" onClick={() => setSelectedAssetId(null)} className="h-6 text-[8px] uppercase font-bold tracking-widest">Cancel</Button>
+                  {/* TAB 1: Website Photography & Branding */}
+                  {mediaCategory === 'website' && (
+                    <div className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        {MANAGED_WEBSITE_MEDIA.map((item) => {
+                          const isSelected = selectedMediaItem?.id === item.id;
+                          const liveUrl = getAssetPublicUrl(item.fileName);
+
+                          return (
+                            <div
+                              key={item.id}
+                              onClick={() => {
+                                setSelectedMediaItem(item);
+                                setSelectedAssetId(item.id);
+                                setAssetFile(null);
+                                setAssetPreview(null);
+                              }}
+                              className={cn(
+                                "p-5 rounded-xl border bg-[#111416] cursor-pointer hover:border-[#E15D44]/80 transition-all flex flex-col justify-between group shadow-lg",
+                                isSelected ? "border-[#E15D44] ring-1 ring-[#E15D44]" : "border-[#252B2F]"
+                              )}
+                            >
+                              <div>
+                                {/* Header / Location */}
+                                <div className="flex items-center justify-between mb-3">
+                                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#E15D44] bg-[#191D20] px-2.5 py-1 rounded-md border border-[#252B2F]">
+                                    {item.section}
+                                  </span>
+                                  <span className="text-[9px] font-mono text-[#9FA3A3] uppercase">
+                                    {item.aspectRatio}
+                                  </span>
+                                </div>
+
+                                {/* Preview Image Container */}
+                                <div className="aspect-video w-full rounded-lg bg-[#090B0C] border border-[#252B2F] overflow-hidden relative mb-4 group-hover:border-[#E15D44]/50 transition-colors">
+                                  <img
+                                    src={liveUrl}
+                                    alt={item.name}
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                                    onError={(e) => {
+                                      (e.target as HTMLImageElement).src = item.defaultUrl;
+                                    }}
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-[#090B0C]/80 via-transparent to-transparent pointer-events-none" />
+                                  <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px] font-mono text-[#F2EFE9] px-2 py-1 rounded bg-[#090B0C]/90 backdrop-blur-sm border border-[#252B2F]">
+                                    <span className="truncate">{item.fileName}</span>
+                                    <span className="text-[#61B58A]">Supabase Sync</span>
+                                  </div>
+                                </div>
+
+                                <h4 className="text-sm font-bold text-[#F2EFE9] mb-1 group-hover:text-[#E15D44] transition-colors">
+                                  {item.name}
+                                </h4>
+                                <p className="text-xs text-[#9FA3A3] leading-relaxed">
+                                  {item.description}
+                                </p>
+                              </div>
+
+                              <div className="pt-4 mt-4 border-t border-[#252B2F] flex items-center justify-between text-xs font-mono">
+                                <span className="text-[#E15D44] font-bold group-hover:underline flex items-center gap-1">
+                                  <Upload className="w-3.5 h-3.5" />
+                                  {isSelected ? 'Ready to Replace' : 'Replace Image'}
+                                </span>
+                                <span className="text-[10px] text-[#9FA3A3]">assets/{item.fileName}</span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* TAB 2: Personnel Avatars */}
+                  {mediaCategory === 'avatars' && (
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                      {placeholderData.placeholderImages.map((asset) => (
+                        <div 
+                          key={asset.id}
+                          onClick={() => {
+                            setSelectedAssetId(asset.id);
+                            setSelectedMediaItem(null);
+                            setAssetFile(null);
+                            setAssetPreview(null);
+                          }}
+                          className={cn(
+                            "p-3.5 rounded-xl border border-[#252B2F] bg-[#111416] cursor-pointer hover:border-[#E15D44]/70 transition-all text-center space-y-2.5",
+                            selectedAssetId === asset.id && !selectedMediaItem && "border-[#E15D44] bg-[#E15D44]/5"
+                          )}
+                        >
+                          <div className="aspect-[4/5] rounded-lg bg-black/40 flex items-center justify-center relative overflow-hidden border border-[#252B2F]">
+                             <img 
+                               src={`${supabase.storage.from('assets').getPublicUrl(`${asset.id}.png`).data?.publicUrl || asset.imageUrl}`} 
+                               alt={asset.id} 
+                               className="object-cover w-full h-full opacity-80" 
+                               onError={(e) => {
+                                 (e.target as HTMLImageElement).src = asset.imageUrl;
+                               }}
+                             />
+                          </div>
+                          <p className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#F2EFE9] truncate">
+                            {asset.id.replace('-', ' ')}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Active Upload & Replacement Panel */}
+                  {(selectedMediaItem || selectedAssetId) && (
+                    <div className="p-6 md:p-8 rounded-2xl border border-[#E15D44]/40 bg-[#111416] space-y-6 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200">
+                      <div className="flex justify-between items-start pb-3 border-b border-[#252B2F]">
+                        <div>
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-[#E15D44] font-bold block">
+                            Target Storage File: assets/{selectedMediaItem ? selectedMediaItem.fileName : `${selectedAssetId}.png`}
+                          </span>
+                          <h4 className="text-base font-bold text-[#F2EFE9] mt-0.5">
+                            Upload Replacement for &ldquo;{selectedMediaItem?.name || selectedAssetId}&rdquo;
+                          </h4>
+                          {selectedMediaItem && (
+                            <p className="text-xs text-[#9FA3A3] mt-0.5">
+                              Recommended size: {selectedMediaItem.aspectRatio} (JPG, PNG, or WebP)
+                            </p>
+                          )}
+                        </div>
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          onClick={() => {
+                            setSelectedAssetId(null);
+                            setSelectedMediaItem(null);
+                            setAssetFile(null);
+                            setAssetPreview(null);
+                          }} 
+                          className="h-8 text-xs font-mono uppercase tracking-wider text-[#9FA3A3] hover:text-[#F2EFE9]"
+                        >
+                          Cancel
+                        </Button>
                       </div>
                       
-                      <div className="flex flex-col items-center justify-center p-8 border border-dashed border-primary/20 bg-black/40 relative group cursor-pointer">
+                      {/* Upload Box */}
+                      <div className="flex flex-col items-center justify-center p-8 rounded-xl border border-dashed border-[#252B2F] hover:border-[#E15D44]/60 bg-[#090B0C] relative group cursor-pointer transition-colors">
                         <input 
                           type="file" 
                           accept="image/*" 
@@ -730,23 +881,56 @@ export default function AdminDashboard() {
                           onChange={handleAssetChange}
                         />
                         {assetPreview ? (
-                          <img src={assetPreview} alt="Preview" className="h-32 w-auto object-contain mb-4" />
+                          <div className="space-y-3 text-center">
+                            <img src={assetPreview} alt="Preview" className="max-h-48 w-auto rounded-lg object-contain mx-auto border border-[#252B2F]" />
+                            <p className="text-xs font-mono text-[#E15D44] font-bold">
+                              Selected: {assetFile?.name} ({(assetFile?.size ? (assetFile.size / 1024).toFixed(1) : 0)} KB)
+                            </p>
+                          </div>
                         ) : (
-                          <Upload className="w-10 h-10 text-primary opacity-30 mb-4" />
+                          <div className="text-center space-y-2">
+                            <Upload className="w-10 h-10 text-[#E15D44] opacity-50 mx-auto group-hover:scale-110 transition-transform" />
+                            <p className="text-xs font-mono font-bold text-[#F2EFE9]">
+                              Click or Drag & Drop new image here
+                            </p>
+                            <p className="text-[10px] font-mono text-[#9FA3A3]">
+                              Supported formats: JPG, PNG, WebP
+                            </p>
+                          </div>
                         )}
-                        <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground">
-                          {assetFile ? assetFile.name : 'Click to Upload High-Res Media'}
-                        </p>
                       </div>
 
-                      <Button 
-                        onClick={uploadAsset} 
-                        disabled={!assetFile || uploadingAsset}
-                        className="w-full h-12 bg-primary text-black font-black uppercase tracking-widest premium-cta"
-                      >
-                        {uploadingAsset ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <ShieldCheck className="w-4 h-4 mr-2" />}
-                        Sync Media Asset
-                      </Button>
+                      <div className="flex flex-col sm:flex-row items-center gap-3">
+                        <Button 
+                          onClick={uploadAsset} 
+                          disabled={!assetFile || uploadingAsset}
+                          className="w-full sm:w-auto flex-1 h-12 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/20 rounded-lg transition-colors"
+                        >
+                          {uploadingAsset ? (
+                            <>
+                              <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                              Uploading to Supabase Storage...
+                            </>
+                          ) : (
+                            <>
+                              <Upload className="w-4 h-4 mr-2" />
+                              Upload & Publish to Supabase Storage
+                            </>
+                          )}
+                        </Button>
+
+                        <Button 
+                          variant="outline"
+                          onClick={() => {
+                            setAssetFile(null);
+                            setAssetPreview(null);
+                          }}
+                          disabled={!assetFile || uploadingAsset}
+                          className="w-full sm:w-auto h-12 border-[#252B2F] text-xs font-mono text-[#9FA3A3] hover:text-[#F2EFE9]"
+                        >
+                          Clear Selection
+                        </Button>
+                      </div>
                     </div>
                   )}
                 </div>

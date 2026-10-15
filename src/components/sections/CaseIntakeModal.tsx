@@ -40,7 +40,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
     { id: 'investment_scam', label: 'Investment Scam / Fake Platform', desc: 'I sent crypto to a trading platform, fake broker, or yield scheme that turned out to be fraudulent' },
     { id: 'romance_scam', label: 'Romance Scam / Deceptive Contact', desc: 'Someone I met online, on a dating app, or social media persuaded me to send crypto or deposit on a site' },
     { id: 'theft', label: 'Stolen Cryptocurrency', desc: 'My wallet was drained, hacked, or unauthorized transactions moved funds without my approval' },
-    { id: 'unresponsive', label: 'Locked or Frozen Account', desc: 'An exchange or platform halted withdrawals, demanded fake tax fees, or went dark' },
+    { id: 'unresponsive', label: 'Withheld Funds / Blocked Account', desc: 'A platform halted withdrawals, demanded fake tax fees, or went dark' },
     { id: 'wallet_audit', label: 'Wallet or Transaction Investigation', desc: 'I need to examine a specific wallet address, transaction trail, or counterparties' },
     { id: 'commercial', label: 'Business or Legal Matter', desc: 'Partnership dispute, commercial litigation, or law enforcement / solicitor inquiry' },
   ];
@@ -101,12 +101,12 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
           </div>
 
           <DialogTitle className="text-xl md:text-2xl font-headline font-bold text-[#F2EFE9] pt-2">
-            {submitted ? 'Case Received' : 'Tell Us What Happened'}
+            {submitted ? 'Recovery Case Received' : 'Start Recovery Case'}
           </DialogTitle>
           <DialogDescription className="text-[#9FA3A3] text-xs md:text-sm">
             {submitted 
-              ? 'We have received your case details. A blockchain analyst will review the records under strict confidentiality.'
-              : 'Share a few details about your situation. We will check the public blockchain records and tell you honestly what can be traced.'}
+              ? 'We have received your case details. An asset recovery specialist will review the records under strict confidentiality.'
+              : 'Share a few details about your situation. We will trace the transaction trail, identify recipient accounts, and initiate recovery action.'}
           </DialogDescription>
         </DialogHeader>
 
@@ -118,7 +118,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
             <div className="space-y-2">
               <h4 className="text-lg font-bold text-[#F2EFE9]">Reference Number: FR-{Math.floor(100000 + Math.random() * 900000)}</h4>
               <p className="text-xs text-[#9FA3A3] max-w-md mx-auto leading-relaxed">
-                An investigator has been assigned to look into your transaction history. You will receive an assessment by email within 24 hours.
+                An asset recovery specialist has been assigned to examine your transaction history and coordinate immediate fund recovery actions. You will receive an assessment by email within 24 hours.
               </p>
             </div>
             <div className="p-4 rounded-lg bg-[#090B0C] border border-[#252B2F] text-left text-xs font-mono space-y-1 max-w-md mx-auto">
@@ -213,7 +213,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
                 <div className="p-3.5 rounded-lg bg-[#090B0C] border border-[#252B2F] flex items-start gap-3 text-xs text-[#9FA3A3]">
                   <AlertCircle className="w-4 h-4 text-[#E15D44] shrink-0 mt-0.5" />
                   <span>
-                    Tip: Tracing early makes it much easier to pinpoint exchange accounts before the recipient converts cryptocurrency into traditional cash.
+                    Tip: Tracing early makes it much easier to track down the recipient and recover your scam funds.
                   </span>
                 </div>
               </div>
@@ -309,7 +309,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
                 </div>
 
                 <div className="p-3 bg-[#090B0C] border border-[#252B2F] rounded-lg text-[11px] text-[#9FA3A3] leading-relaxed">
-                  <strong className="text-[#F2EFE9]">Important Notice:</strong> Fundresq does not offer legal representation or promise asset recovery. We trace transactions and produce verified reports for you, police, and legal counsel. All information is held strictly confidential.
+                  <strong className="text-[#F2EFE9]">Confidential Case Review:</strong> Fundresq provides cryptocurrency tracing and direct scam fund recovery services. All information is held strictly confidential.
                 </div>
               </div>
             )}
@@ -342,7 +342,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
                   type="submit"
                   className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-8 shadow-lg shadow-[#E15D44]/20"
                 >
-                  Submit Case for Review <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  Submit Case to Recover Funds <ArrowRight className="w-3.5 h-3.5 ml-1" />
                 </Button>
               )}
             </div>
