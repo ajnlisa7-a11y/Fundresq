@@ -47,15 +47,15 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
           {/* Investigations */}
           <div className="space-y-3 font-mono">
             <h5 className="text-[11px] font-bold text-[#F2EFE9] uppercase tracking-widest">
-              Investigations
+              Scam Tracing
             </h5>
             <ul className="space-y-2.5 text-[#9FA3A3]">
-              <li><Link href="/#services" className="hover:text-[#E15D44] transition-colors">Stolen Cryptocurrency</Link></li>
-              <li><Link href="/#services" className="hover:text-[#E15D44] transition-colors">Investment Scam Tracing</Link></li>
-              <li><Link href="/#services" className="hover:text-[#E15D44] transition-colors">Romance Scam Tracing</Link></li>
-              <li><Link href="/#services" className="hover:text-[#E15D44] transition-colors">Wallet & Cluster Mapping</Link></li>
-              <li><Link href="/#services" className="hover:text-[#E15D44] transition-colors">Cross-Chain Activity Tracing</Link></li>
-              <li><Link href="/#services" className="hover:text-[#E15D44] transition-colors">Commercial & Legal Matters</Link></li>
+              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Investment Scams</Link></li>
+              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Romance Scams</Link></li>
+              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Stolen Cryptocurrency</Link></li>
+              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Fake Trading Platforms</Link></li>
+              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Wallet Hacks & Drainers</Link></li>
+              <li><Link href="/#what-happened" className="hover:text-[#E15D44] transition-colors">Other Crypto Incidents</Link></li>
             </ul>
           </div>
 
@@ -66,11 +66,10 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
             </h5>
             <ul className="space-y-2.5 text-[#9FA3A3]">
               <li><Link href="/how-tracing-works" className="hover:text-[#E15D44] transition-colors text-[#E15D44] font-bold">How Tracing Works →</Link></li>
-              <li><Link href="/#why-fundresq" className="hover:text-[#E15D44] transition-colors">About Our Practice</Link></li>
-              <li><Link href="/#methodology" className="hover:text-[#E15D44] transition-colors">Our 6-Step Process</Link></li>
-              <li><Link href="/#deliverables" className="hover:text-[#E15D44] transition-colors">Evidence Reports</Link></li>
+              <li><Link href="/#how-we-help" className="hover:text-[#E15D44] transition-colors">How We Help</Link></li>
+              <li><Link href="/#how-it-works" className="hover:text-[#E15D44] transition-colors">Our 4-Step Process</Link></li>
               <li><Link href="/#scenarios" className="hover:text-[#E15D44] transition-colors">Case Examples</Link></li>
-              <li><Link href="/#insights" className="hover:text-[#E15D44] transition-colors">Fundresq Intelligence</Link></li>
+              <li><Link href="/#faq" className="hover:text-[#E15D44] transition-colors">Frequently Asked Questions</Link></li>
             </ul>
           </div>
 

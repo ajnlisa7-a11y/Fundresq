@@ -1,126 +1,145 @@
 'use client';
 
-import { Shield, ArrowRight, CheckCircle2, FileSearch, Building2, Shuffle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { TrendingDown, UserX, ShieldAlert, ArrowRight } from 'lucide-react';
 
-export function ScenariosSection({ onOpenIntake }: { onOpenIntake: () => void }) {
-  const scenarios = [
+interface ScenariosSectionProps {
+  onOpenIntake: () => void;
+}
+
+export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
+  const cases = [
     {
       id: '01',
-      caseType: 'Suspected investment scam',
-      incident: 'A client sent cryptocurrency to what appeared to be an investment platform.',
-      investigation: 'We reviewed the original transactions and followed relevant movements from the receiving wallets.',
-      deliverable: 'A clear report showing the transaction trail and our findings.',
-      tag: 'Platform Fraud',
-      icon: TrendingDownIcon,
+      badge: 'Investment Platform',
+      title: 'Fake Crypto Investment Scheme',
+      victimStory:
+        'A victim deposited $48,000 into an online platform advertising automated high-yield returns. When they requested a withdrawal, the site demanded a 20% "tax fee" and locked their account.',
+      howWeHelped:
+        'We traced the initial deposit through three intermediate wallets, identifying the final transfer into an account on a major centralized exchange.',
+      outcome:
+        'Client received a verified evidence pack with exact exchange account records, enabling their solicitor to file an immediate freeze request with the exchange compliance department.',
+      icon: TrendingDown,
     },
     {
       id: '02',
-      caseType: 'Drained personal wallet',
-      incident: 'A client noticed unauthorized transactions leaving their wallet after interacting with a deceptive link.',
-      investigation: 'We traced the movement of the stolen tokens across multiple wallet hops and token swaps.',
-      deliverable: 'A chronological transaction timeline identifying the exchange where funds were deposited.',
-      tag: 'Wallet Compromise',
-      icon: Shuffle,
+      badge: 'Social Engineering',
+      title: 'Romance & Trust Scam',
+      victimStory:
+        'An individual was convinced by an acquaintance met on social media to transfer USDT into a deceptive liquidity-mining pool over a four-month period.',
+      howWeHelped:
+        'We mapped every individual transfer across the Tron network, aggregating all transactions into a single chronological timeline showing the scammer’s collection wallet.',
+      outcome:
+        'Delivered an investigative summary detailing the exact wallet cluster and total funds diverted, submitted directly to federal cybercrime reporting units.',
+      icon: UserX,
     },
     {
       id: '03',
-      caseType: 'Business or partnership dispute',
-      incident: 'A business experienced an unapproved transfer of cryptocurrency reserves between partners.',
-      investigation: "We examined the company's historical wallet activity and separated business expenses from personal transfers.",
-      deliverable: 'An objective written report and ledger exhibit suitable for legal advisers and dispute resolution.',
-      tag: 'Commercial Dispute',
-      icon: Building2,
+      badge: 'Unauthorized Transfer',
+      title: 'Compromised Personal Wallet',
+      victimStory:
+        'A cryptocurrency holder connected their wallet to a fraudulent web application, resulting in all tokens being drained within minutes across multiple transactions.',
+      howWeHelped:
+        'We followed the stolen tokens through decentralized token swaps and cross-chain bridges, documenting the conversion trail back into Bitcoin.',
+      outcome:
+        'Provided a complete visual and tabular ledger exhibit tracking where the stolen funds were consolidated for law enforcement investigators.',
+      icon: ShieldAlert,
     },
   ];
 
   return (
-    <section id="scenarios" className="py-24 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
+    <section id="scenarios" className="py-24 md:py-32 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
+          <span className="text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
             Case Examples
           </span>
-          <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
             Examples of cases we investigate
           </h2>
-          <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed max-w-2xl mx-auto">
-            The examples below are anonymised or illustrative and do not promise a particular outcome.
+          <p className="text-base sm:text-lg text-[#9FA3A3] font-normal max-w-2xl mx-auto leading-relaxed">
+            The examples below are anonymised and illustrative. Every case has a unique transaction trail.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-          {scenarios.map((sc) => {
-            const Icon = sc.icon;
+        {/* Exactly 3 Case Cards Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-14">
+          {cases.map((c) => {
+            const Icon = c.icon;
             return (
               <div
-                key={sc.id}
-                className="p-8 rounded-xl bg-[#111416] border border-[#252B2F] flex flex-col justify-between hover:border-[#E15D44]/50 transition-all duration-300 group"
+                key={c.id}
+                className="p-8 md:p-9 rounded-2xl bg-[#111416] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#E15D44] font-bold">
-                      CASE TYPE
-                    </span>
-                    <span className="text-[9px] font-mono uppercase tracking-widest text-[#9FA3A3] bg-[#191D20] px-2.5 py-1 rounded border border-[#252B2F]">
-                      {sc.tag}
+                  {/* Top Bar */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-[#191D20] border border-[#252B2F] flex items-center justify-center text-[#E15D44] group-hover:bg-[#E15D44] group-hover:text-[#090B0C] transition-colors">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <span className="text-xs font-mono font-bold text-[#E15D44] uppercase tracking-wider">
+                        Case {c.id}
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#9FA3A3] bg-[#090B0C] px-3 py-1 rounded-full border border-[#252B2F]">
+                      {c.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#F2EFE9] mb-5 group-hover:text-[#E15D44] transition-colors">
-                    {sc.caseType}
+                  {/* Title */}
+                  <h3 className="text-xl font-headline font-bold text-[#F2EFE9] mb-4 group-hover:text-[#E15D44] transition-colors">
+                    {c.title}
                   </h3>
 
-                  <div className="space-y-4 text-xs text-[#9FA3A3]">
+                  {/* Body Content */}
+                  <div className="space-y-4 text-xs md:text-sm text-[#9FA3A3] leading-relaxed">
                     <div>
-                      <strong className="text-[#F2EFE9] block font-mono uppercase text-[10px] mb-1">
-                        What happened
-                      </strong>
-                      <p className="leading-relaxed">{sc.incident}</p>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#F2EFE9] font-bold block mb-1">
+                        What Happened:
+                      </span>
+                      <p>{c.victimStory}</p>
                     </div>
 
                     <div>
-                      <strong className="text-[#E15D44] block font-mono uppercase text-[10px] mb-1">
-                        What we investigated
-                      </strong>
-                      <p className="leading-relaxed">{sc.investigation}</p>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#E15D44] font-bold block mb-1">
+                        What We Traced:
+                      </span>
+                      <p>{c.howWeHelped}</p>
                     </div>
 
                     <div>
-                      <strong className="text-[#61B58A] block font-mono uppercase text-[10px] mb-1">
-                        What we provided
-                      </strong>
-                      <p className="leading-relaxed">{sc.deliverable}</p>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#61B58A] font-bold block mb-1">
+                        The Deliverable:
+                      </span>
+                      <p>{c.outcome}</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-[#252B2F]">
+                {/* Footer action */}
+                <div className="pt-6 mt-6 border-t border-[#252B2F] flex items-center justify-between">
                   <button
                     onClick={onOpenIntake}
-                    className="text-xs font-mono font-bold text-[#E15D44] hover:text-[#F0836D] flex items-center gap-1.5 group-hover:translate-x-1 transition-transform"
+                    className="text-xs font-mono font-bold text-[#E15D44] group-hover:text-[#F0836D] transition-colors flex items-center gap-1.5"
                   >
-                    See how the investigation works →
+                    Have a similar case? Tell us what happened
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
+                  <span className="text-[10px] font-mono text-[#9FA3A3]/50 uppercase tracking-widest">
+                    Anonymised
+                  </span>
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="text-center text-xs text-[#9FA3A3]/70 italic max-w-2xl mx-auto">
-          The examples above are anonymised or illustrative and do not promise a particular outcome.
+        {/* Disclaimer Note */}
+        <div className="text-center text-xs text-[#9FA3A3]/70 font-mono max-w-2xl mx-auto">
+          Case examples are anonymised to protect client privacy. Past investigations do not guarantee future outcomes.
         </div>
       </div>
     </section>
-  );
-}
-
-function TrendingDownIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
-      <polyline points="17 18 23 18 23 12" />
-    </svg>
   );
 }

@@ -20,7 +20,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-[#090B0C] border-b border-[#252B2F] overflow-hidden">
+    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-[#090B0C] border-b border-[#252B2F] overflow-hidden">
       {/* Dynamic Synced Hero Background */}
       {heroBgUrl && (
         <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -53,26 +53,26 @@ export function Hero({ onOpenIntake }: HeroProps) {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(225, 93, 68,0.1)_0%,transparent_70%)] pointer-events-none z-[1]" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111416] border border-[#252B2F] text-[#E15D44] text-[10px] font-mono font-bold tracking-[0.25em] uppercase mb-6 md:mb-8">
+        <div className="max-w-4xl mx-auto text-center mb-10">
+          {/* Small Descriptor Eyebrow */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111416] border border-[#252B2F] text-[#E15D44] text-[10px] md:text-[11px] font-mono font-bold tracking-[0.25em] uppercase mb-6 md:mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#E15D44] animate-pulse" />
-            Lost or Stolen Cryptocurrency?
+            CRYPTO SCAM & TRANSACTION INVESTIGATIONS
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-[1.02] md:leading-[0.98] mb-6 md:mb-8">
-            Follow the funds. <br />
-            <span className="text-[#E15D44] italic">Establish the facts.</span>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-[1.05] md:leading-[1] mb-6 md:mb-8">
+            Lost money to a crypto scam? <br />
+            <span className="text-[#E15D44] italic">We help trace where it went.</span>
           </h1>
 
           {/* Supporting Text */}
           <p className="text-base sm:text-lg md:text-xl text-[#9FA3A3] max-w-2xl mx-auto leading-relaxed font-normal mb-8 text-balance">
-            Fundresq investigates suspicious cryptocurrency transactions. We follow the movement of funds, document what we find, and help you understand what to do next.
+            Fundresq investigates cryptocurrency scams and suspicious transactions. We trace the movement of funds, document what we find, and explain your next steps.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Button
               onClick={onOpenIntake}
               className="w-full sm:w-auto h-13 px-8 text-xs md:text-sm bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold uppercase tracking-widest shadow-2xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
@@ -81,7 +81,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <Link href="#methodology" className="w-full sm:w-auto">
+            <Link href="#how-it-works" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto h-13 px-8 text-xs md:text-sm border-[#252B2F] bg-[#111416] hover:bg-[#191D20] text-[#F2EFE9] font-bold uppercase tracking-wider rounded-lg"
@@ -91,26 +91,20 @@ export function Hero({ onOpenIntake }: HeroProps) {
             </Link>
           </div>
 
+          {/* Underneath Scam Types List */}
+          <div className="text-xs md:text-sm font-mono text-[#9FA3A3] mb-5 tracking-wide">
+            Investment scams · Romance scams · Stolen crypto · Wallet theft · Suspicious transactions
+          </div>
+
+          {/* Brand Signature Line */}
+          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[#E15D44]/90 mb-8 py-1 px-3 rounded-full bg-[#111416]/80 border border-[#252B2F]">
+            Follow the funds. Establish the facts.
+          </div>
+
           {/* Confidentiality note */}
           <p className="text-xs text-[#9FA3A3] max-w-lg mx-auto mb-8 leading-relaxed flex items-center justify-center gap-1.5 font-mono">
             <span>🔒</span> Your case information is handled confidentially.
           </p>
-
-          {/* Credibility Chips */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] font-mono text-[#9FA3A3] uppercase tracking-widest">
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#61B58A]" /> No false recovery promises
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E15D44]" /> Transparent scope
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#61B58A]" /> Evidence for police & solicitors
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#6DA7B5]" /> Strictly confidential
-            </span>
-          </div>
         </div>
 
         {/* Rapid Hash / Wallet Input Triage Card */}
@@ -128,19 +122,16 @@ export function Hero({ onOpenIntake }: HeroProps) {
             </div>
             <Button
               type="submit"
-              className="w-full sm:w-auto bg-[#E15D44] text-[#090B0C] hover:bg-[#F0836D] font-mono text-xs font-bold uppercase tracking-wider py-3 px-6 shrink-0 h-11 rounded-lg transition-colors"
+              className="w-full sm:w-auto h-11 px-6 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-wider shrink-0 rounded-lg transition-colors"
             >
-              Review Transaction →
+              Check My Case
             </Button>
           </form>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-3 mt-3 border-t border-[#252B2F]/60 text-[10px] font-mono text-[#9FA3A3]">
+          <div className="flex items-center justify-between mt-3 pt-3 border-t border-[#252B2F] text-[10px] font-mono text-[#9FA3A3]">
             <span className="flex items-center gap-1.5">
-              <Lock className="w-3 h-3 text-[#E15D44]" /> Your inquiry is private and kept strictly confidential
+              <Lock className="w-3 h-3 text-[#E15D44]" /> Strictly confidential intake
             </span>
-            <span className="text-[#9FA3A3]/80">
-              Supported networks: BTC • ETH • SOL • TRX • ARB • BSC
-            </span>
+            <span>Independent Blockchain Tracing</span>
           </div>
         </div>
       </div>
