@@ -144,7 +144,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-[10px] font-mono uppercase tracking-widest text-[#E15D44] mb-1 font-bold">Confidential Email</p>
-                        <p className="text-lg font-bold text-[#F2EFE9] group-hover:text-[#E15D44] transition-colors">forensics@fundresq.com</p>
+                        <p className="text-lg font-bold text-[#F2EFE9] group-hover:text-[#E15D44] transition-colors">forensics@fundoraid.com</p>
                       </div>
                     </div>
                   </Card>

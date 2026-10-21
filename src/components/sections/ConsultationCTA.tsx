@@ -37,12 +37,12 @@ export function ConsultationCTA({ onOpenIntake }: { onOpenIntake: () => void }) 
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <a href="mailto:investigations@fundresq.com" className="w-full sm:w-auto">
+            <a href="mailto:investigations@fundoraid.com" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto h-13 px-8 text-xs md:text-sm border-[#252B2F] bg-[#090B0C]/80 hover:bg-[#090B0C] text-[#F2EFE9] font-bold uppercase tracking-wider rounded-lg"
               >
-                <Mail className="mr-2 w-4 h-4 text-[#E15D44]" /> investigations@fundresq.com
+                <Mail className="mr-2 w-4 h-4 text-[#E15D44]" /> investigations@fundoraid.com
               </Button>
             </a>
           </div>

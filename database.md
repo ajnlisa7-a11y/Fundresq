@@ -1,6 +1,6 @@
-# Fundresq Investigation Database Schema
+# Fundoraid Investigation Database Schema
 
-This document outlines the database structure, storage bucket configurations, and Row Level Security (RLS) policies required for the Fundresq platform.
+This document outlines the database structure, storage bucket configurations, and Row Level Security (RLS) policies required for the Fundoraid platform.
 
 ---
 

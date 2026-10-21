@@ -66,7 +66,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
 
           {/* Supporting Text */}
           <p className="text-base sm:text-lg md:text-xl text-[#9FA3A3] max-w-2xl mx-auto leading-relaxed font-normal mb-8 text-balance">
-            Fundresq investigates cryptocurrency fraud, traces stolen digital assets across blockchains, and takes direct action to help recover your lost cryptocurrency.
+            Fundoraid investigates cryptocurrency fraud, traces stolen digital assets across blockchains, and takes direct action to help recover your lost cryptocurrency.
           </p>
 
           {/* CTAs */}

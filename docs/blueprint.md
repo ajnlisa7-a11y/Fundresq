@@ -1,4 +1,4 @@
-# **App Name**: Fundresq
+# **App Name**: Fundoraid
 
 ## Core Features:
 

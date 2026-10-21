@@ -71,7 +71,9 @@ export function TeamSection() {
         .getPublicUrl(fileName);
       
       if (data?.publicUrl) {
-        const timestamp = typeof window !== 'undefined' ? localStorage.getItem(`fundresq_asset_${fileName}`) || localStorage.getItem('fundresq_assets_updated') || Date.now().toString() : Date.now().toString();
+        const timestamp = typeof window !== 'undefined' 
+          ? localStorage.getItem(`fundoraid_asset_${fileName}`) || localStorage.getItem('fundoraid_assets_updated') || localStorage.getItem(`fundresq_asset_${fileName}`) || localStorage.getItem('fundresq_assets_updated') || Date.now().toString() 
+          : Date.now().toString();
         urls[member.id] = `${data.publicUrl}?t=${timestamp}`;
       }
     }

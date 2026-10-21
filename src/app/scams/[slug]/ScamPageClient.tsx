@@ -178,7 +178,7 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
         </div>
       </section>
 
-      {/* 3. How Fundresq Investigates This Scam */}
+      {/* 3. How Fundoraid Investigates This Scam */}
       <section id="how-we-investigate" className="py-20 md:py-28 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -186,7 +186,7 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
               Forensic Methodology
             </span>
             <h2 className="text-3xl sm:text-4xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
-              How Fundresq investigates {scam.title.toLowerCase()}
+              How Fundoraid investigates {scam.title.toLowerCase()}
             </h2>
             <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
               We do not rely on guesses or assumptions. We reconstruct the movement of funds directly from the public blockchain ledger.
@@ -269,7 +269,7 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
 
               <div>
                 <strong className="text-[#E15D44] font-mono uppercase text-[10px] tracking-wider block mb-1.5">
-                  What Fundresq Discovered:
+                  What Fundoraid Discovered:
                 </strong>
                 <p>{scam.caseStudy.findings}</p>
               </div>

@@ -49,7 +49,7 @@ const aiGuidedRecoveryPreparationPrompt = ai.definePrompt({
   name: 'aiGuidedRecoveryPreparationPrompt',
   input: {schema: AIGuidedRecoveryPreparationInputSchema},
   output: {schema: AIGuidedRecoveryPreparationOutputSchema},
-  prompt: `You are an investigative assistant for Fundresq. 
+  prompt: `You are an investigative assistant for Fundoraid. 
 
 Your task is to conduct an "Automated Case Intake Assessment" based on the user's data.
 

@@ -95,7 +95,7 @@ const CASE_PROFILES: Record<string, CaseProfile> = {
     step4Subtext: 'Assigned directly to our Investment Fraud Recovery team.',
     step4SpecialCheckLabel: 'I am currently being pressured to pay more money to "unlock" my funds',
     step4SpecialCheckDesc: 'Do NOT send any more funds. Our recovery specialists prioritize active fraud containment.',
-    step4Notice: 'Strictly confidential. Fundresq investigates investment fraud and executes direct recovery actions against recipient endpoints.',
+    step4Notice: 'Strictly confidential. Fundoraid investigates investment fraud and executes direct recovery actions against recipient endpoints.',
     submitButtonText: 'Submit Case to Recover Investment Funds',
     successTitle: 'Investment Recovery Case Logged',
     successActionText: 'Our fraud analysts are reviewing your broker deposit trail and mapping recipient endpoints to initiate direct recovery.'
@@ -175,7 +175,7 @@ const CASE_PROFILES: Record<string, CaseProfile> = {
     step4Subtext: 'Direct escalation to our Blockchain Forensics and Recovery desk.',
     step4SpecialCheckLabel: 'Other assets or tokens are still remaining in the affected wallet',
     step4SpecialCheckDesc: 'Never send new funds to this wallet. Create a fresh secure wallet immediately.',
-    step4Notice: 'Fundresq will never ask for your seed phrase or private keys. We only inspect public ledger records to recover your assets.',
+    step4Notice: 'Fundoraid will never ask for your seed phrase or private keys. We only inspect public ledger records to recover your assets.',
     submitButtonText: 'Submit Case to Recover Stolen Crypto',
     successTitle: 'Theft Recovery Protocol Initiated',
     successActionText: 'Our forensic team is analyzing the drainer contract and tracking the movement of stolen funds to initiate direct recovery.'
@@ -215,7 +215,7 @@ const CASE_PROFILES: Record<string, CaseProfile> = {
     step4Subtext: 'Targeted recovery action to reclaim upfront collateral and advance fees.',
     step4SpecialCheckLabel: 'The lender is currently demanding another payment to release the loan',
     step4SpecialCheckDesc: 'Do NOT send any more payments. Real lenders never require crypto deposits to release a loan.',
-    step4Notice: 'Fundresq takes direct action to track down the recipient wallets and recover advance-fee scam payments.',
+    step4Notice: 'Fundoraid takes direct action to track down the recipient wallets and recover advance-fee scam payments.',
     submitButtonText: 'Submit Case to Recover Loan Scam Funds',
     successTitle: 'Loan Scam Recovery Case Received',
     successActionText: 'Our fraud team is tracing the advance fee payments to identify the recipient accounts and execute direct recovery.'
@@ -266,7 +266,7 @@ const CASE_PROFILES: Record<string, CaseProfile> = {
     badge: 'Direct Scam Fund Recovery',
     desc: 'I need to locate diverted funds, track the recipient trail, and execute direct recovery of my lost assets',
     icon: Scale,
-    step2Advice: 'Fundresq is tasked to help trace and recover lost funds directly. We pinpoint recipient accounts and take direct action to reclaim your cryptocurrency.',
+    step2Advice: 'Fundoraid is tasked to help trace and recover lost funds directly. We pinpoint recipient accounts and take direct action to reclaim your cryptocurrency.',
     timingQuestion: 'When were the assets diverted or stolen?',
     timingOptions: [
       { id: 'urgent', label: 'Past 7 Days', sub: 'Immediate priority' },
@@ -295,7 +295,7 @@ const CASE_PROFILES: Record<string, CaseProfile> = {
     step4Subtext: 'Direct case intake for full-cycle scam fund recovery.',
     step4SpecialCheckLabel: 'I am the verified owner of the originating wallet/funds',
     step4SpecialCheckDesc: 'Proof of ownership enables our team to take swift recovery action.',
-    step4Notice: 'Fundresq takes direct action to locate and recover your scam funds. We do not refer you off to third parties.',
+    step4Notice: 'Fundoraid takes direct action to locate and recover your scam funds. We do not refer you off to third parties.',
     submitButtonText: 'Submit Case for Direct Asset Recovery',
     successTitle: 'Asset Recovery Case Initiated',
     successActionText: 'Your claim is now in our active recovery pipeline. Our specialists are pinpointing recipient endpoints to execute recovery.'

@@ -231,11 +231,11 @@ export function ReportDeliverables({ onOpenIntake }: { onOpenIntake: () => void 
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#E15D44]" />
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F2EFE9]">
-                      Fundresq Investigation Report
+                      Fundoraid Investigation Report
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-[10px] font-mono">
-                    <span className="text-[#9FA3A3]">REF: FR-2026-8812</span>
+                    <span className="text-[#9FA3A3]">REF: FO-2026-8812</span>
                     <span className="text-[#E15D44] px-2 py-0.5 rounded bg-[#E15D44]/10 border border-[#E15D44]/30 font-bold uppercase">
                       CONFIDENTIAL
                     </span>

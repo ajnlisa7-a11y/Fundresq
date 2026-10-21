@@ -39,7 +39,7 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
     problemSolved:
       'When funds leave your wallet, they can move quickly through several addresses and platforms. Tracing connects these transfers so you can see where the cryptocurrency went.',
     overview:
-      'Blockchains are public ledgers. Every transaction and transfer is recorded. Fundresq examines the transaction trail, mapping intermediate wallets, split amounts, and destination deposit addresses on exchanges.',
+      'Blockchains are public ledgers. Every transaction and transfer is recorded. Fundoraid examines the transaction trail, mapping intermediate wallets, split amounts, and destination deposit addresses on exchanges.',
     capabilities: [
       {
         title: 'Multi-Chain Path Mapping',
@@ -123,7 +123,7 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
           'Yes. Our reports are formatted specifically as evidentiary documents suitable for formal recovery claims, dispute resolutions, and official fraud reporting.',
       },
     ],
-    seoTitle: 'Cryptocurrency Tracing Services | Fundresq',
+    seoTitle: 'Cryptocurrency Tracing Services | Fundoraid',
     seoDescription:
       'Professional blockchain transaction tracing. We follow the movement of Bitcoin, Ethereum, and USDT across wallets and exchanges to document verifiable facts.',
   },
@@ -215,12 +215,12 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
           'Yes. As part of our wallet investigation, we audit all smart contract approvals and explain how to revoke any malicious authorizations that could put future funds at risk.',
       },
       {
-        question: 'Does Fundresq need my private key or seed phrase?',
+        question: 'Does Fundoraid need my private key or seed phrase?',
         answer:
-          'NEVER. Fundresq will NEVER ask for your private key, seed phrase, or wallet passwords. All blockchain investigations are performed using public wallet addresses and transaction hashes.',
+          'NEVER. Fundoraid will NEVER ask for your private key, seed phrase, or wallet passwords. All blockchain investigations are performed using public wallet addresses and transaction hashes.',
       },
     ],
-    seoTitle: 'Wallet & Transaction Investigation Services | Fundresq',
+    seoTitle: 'Wallet & Transaction Investigation Services | Fundoraid',
     seoDescription:
       'Forensic investigation of crypto wallet addresses and transaction histories. We analyze contract interactions, drainer scripts, and counterparty clusters.',
   },
@@ -232,11 +232,11 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
     tagline: 'We track down diverted assets and take direct action to recover your scam funds.',
     heroHeadline: 'Recovering your scam funds.',
     heroSubtitle:
-      'Fundresq traces stolen digital assets across blockchains and takes direct action to recover your lost cryptocurrency.',
+      'Fundoraid traces stolen digital assets across blockchains and takes direct action to recover your lost cryptocurrency.',
     problemSolved:
       'Victims need direct action to recover stolen digital assets, not passive paperwork. We manage the recovery process to return your scam funds.',
     overview:
-      'Fundresq actively traces and manages the recovery of lost or stolen cryptocurrency. We combine on-chain forensic attribution with direct recovery actions to track down recipient accounts and secure the return of your assets.',
+      'Fundoraid actively traces and manages the recovery of lost or stolen cryptocurrency. We combine on-chain forensic attribution with direct recovery actions to track down recipient accounts and secure the return of your assets.',
     capabilities: [
       {
         title: 'Direct Asset Recovery Action',
@@ -300,7 +300,7 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
       {
         question: 'Do I need to hire an external solicitor to recover my funds?',
         answer:
-          'No. Unlike passive forensic firms that only give you a technical report and leave you to find and pay a lawyer, Fundresq is designed to manage the recovery process directly. We locate where your money went and take direct action to recover your scam funds.',
+          'No. Unlike passive forensic firms that only give you a technical report and leave you to find and pay a lawyer, Fundoraid is designed to manage the recovery process directly. We locate where your money went and take direct action to recover your scam funds.',
       },
       {
         question: 'How quickly should I begin the recovery process?',
@@ -308,12 +308,12 @@ export const SERVICES_DATA: Record<string, ServiceDetails> = {
           'As quickly as possible. The sooner our team investigates your transaction trail, the faster we can locate the recipient wallets and initiate recovery actions.',
       },
       {
-        question: 'Does Fundresq charge upfront fees or guarantee 100% recovery?',
+        question: 'Does Fundoraid charge upfront fees or guarantee 100% recovery?',
         answer:
-          'No legitimate firm can promise a 100% recovery guarantee before inspecting blockchain ledgers. Fundresq provides clear, transparent case reviews and works aggressively to recover your scam funds.',
+          'No legitimate firm can promise a 100% recovery guarantee before inspecting blockchain ledgers. Fundoraid provides clear, transparent case reviews and works aggressively to recover your scam funds.',
       },
     ],
-    seoTitle: 'Scam Fund Recovery Services | Fundresq',
+    seoTitle: 'Scam Fund Recovery Services | Fundoraid',
     seoDescription:
       'Direct cryptocurrency and scam fund recovery services. We track stolen digital assets across blockchains and take direct action to recover your lost funds.',
   },

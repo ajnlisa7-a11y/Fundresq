@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!scam) {
     return {
-      title: 'Scam Investigation | Fundresq',
+      title: 'Scam Investigation | Fundoraid',
       description: 'Blockchain transaction tracing and scam investigations.',
     };
   }
@@ -29,13 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: scam.seoTitle,
     description: scam.seoDescription,
     alternates: {
-      canonical: `https://fundresq.com/scams/${slug}`,
+      canonical: `https://fundoraid.com/scams/${slug}`,
     },
     openGraph: {
       title: scam.seoTitle,
       description: scam.seoDescription,
-      url: `https://fundresq.com/scams/${slug}`,
-      siteName: 'Fundresq Forensic Intelligence',
+      url: `https://fundoraid.com/scams/${slug}`,
+      siteName: 'Fundoraid Forensic Intelligence',
       type: 'website',
     },
   };

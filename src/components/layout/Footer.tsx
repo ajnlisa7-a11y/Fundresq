@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FundresqLogo } from '@/components/ui/fundresq-logo';
+import { FundoraidLogo } from '@/components/ui/fundresq-logo';
 import { ArrowRight, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -35,7 +35,7 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16 text-xs">
           {/* Brand Column */}
           <div className="lg:col-span-1 space-y-4">
-            <FundresqLogo size="sm" showSubtitle={false} />
+            <FundoraidLogo size="sm" showSubtitle={false} />
             <p className="text-xs text-[#9FA3A3] leading-relaxed pt-2">
               Blockchain transaction tracing and cryptocurrency recovery. We track stolen digital assets, pinpoint recipient accounts, and coordinate the recovery of your cryptocurrency.
             </p>
@@ -59,10 +59,10 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
             </ul>
           </div>
 
-          {/* Fundresq Practice */}
+          {/* Fundoraid Practice */}
           <div className="space-y-3 font-mono">
             <h5 className="text-[11px] font-bold text-[#F2EFE9] uppercase tracking-widest">
-              Fundresq
+              Fundoraid
             </h5>
             <ul className="space-y-2.5 text-[#9FA3A3]">
               <li><Link href="/how-tracing-works" className="hover:text-[#E15D44] transition-colors text-[#E15D44] font-bold">How Tracing Works →</Link></li>
@@ -83,7 +83,7 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
               <li><Link href="/services/wallet-investigation" className="hover:text-[#E15D44] transition-colors">Wallet Investigation</Link></li>
               <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Forensic Evidence Reports</Link></li>
               <li><Link href="/services/investigation-reports" className="hover:text-[#E15D44] transition-colors">Scam Fund Recovery Desk</Link></li>
-              <li><a href="mailto:investigations@fundresq.com" className="hover:text-[#E15D44] transition-colors">Direct Desk: investigations@fundresq.com</a></li>
+              <li><a href="mailto:investigations@fundoraid.com" className="hover:text-[#E15D44] transition-colors">Direct Desk: investigations@fundoraid.com</a></li>
             </ul>
           </div>
 
@@ -105,12 +105,12 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
         {/* Bottom Disclaimer and Copyright */}
         <div className="pt-8 border-t border-[#252B2F] space-y-4 text-[11px] text-[#9FA3A3] leading-relaxed">
           <p>
-            <strong className="text-[#F2EFE9]">Important Notice:</strong> Fundresq provides blockchain transaction tracing and scam fund recovery coordination services. We trace illicit transaction trails and take direct action to recover stolen digital assets.
+            <strong className="text-[#F2EFE9]">Important Notice:</strong> Fundoraid provides blockchain transaction tracing and scam fund recovery coordination services. We trace illicit transaction trails and take direct action to recover stolen digital assets.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 text-[10px] font-mono text-[#9FA3A3]/80">
             <div>
-              © 2026 Fundresq. All rights reserved.
+              © 2026 Fundoraid. All rights reserved.
             </div>
             <div className="flex items-center gap-4">
               <span>Delaware Registered Forensic Entity</span>

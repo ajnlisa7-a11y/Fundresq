@@ -51,7 +51,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
             Our Services
           </span>
           <h2 className="text-3xl sm:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
-            How Fundresq can help
+            How Fundoraid can help
           </h2>
           <p className="text-base sm:text-lg text-[#9FA3A3] font-normal max-w-xl mx-auto leading-relaxed">
             Direct services to locate and recover your scam funds.
@@ -123,7 +123,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                 Real investigators examining the trail.
               </h3>
               <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
-                Automated tools can miss complex peeling chains and obfuscation methods. At Fundresq, experienced forensic specialists manually inspect transaction records, track down illicit transfers, and execute the recovery of your scam funds.
+                Automated tools can miss complex peeling chains and obfuscation methods. At Fundoraid, experienced forensic specialists manually inspect transaction records, track down illicit transfers, and execute the recovery of your scam funds.
               </p>
               <div className="flex items-center gap-4 text-xs font-mono text-[#F2EFE9]">
                 <div className="flex items-center gap-1.5">
@@ -302,9 +302,9 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
                 </svg>
               </div>
 
-              {/* Bottom Badge: Fundresq Recovers Your Scam Funds */}
+              {/* Bottom Badge: Fundoraid Recovers Your Scam Funds */}
               <div className="text-center px-5 py-2.5 rounded-xl bg-[#E15D44]/10 border border-[#E15D44]/40 text-[#E15D44] text-[11px] font-bold tracking-wider uppercase shadow-lg shadow-[#E15D44]/10">
-                FUNDRESQ RECOVERS YOUR SCAM FUNDS
+                FUNDORAID RECOVERS YOUR SCAM FUNDS
               </div>
             </div>
 
@@ -319,7 +319,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
               </h3>
 
               <p className="text-base sm:text-lg text-[#9FA3A3] font-normal leading-relaxed">
-                Cryptocurrency can move through multiple wallets and networks. Fundresq tracks down the funds and works directly to recover what was taken from you.
+                Cryptocurrency can move through multiple wallets and networks. Fundoraid tracks down the funds and works directly to recover what was taken from you.
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

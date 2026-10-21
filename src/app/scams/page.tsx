@@ -6,11 +6,11 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Cryptocurrency Scams & Investigations Directory | Fundresq',
+  title: 'Cryptocurrency Scams & Investigations Directory | Fundoraid',
   description:
     'Explore common cryptocurrency scams, including investment fraud, romance scams, fake trading platforms, wallet hacks, and crypto theft. Learn how on-chain tracing investigates each incident.',
   alternates: {
-    canonical: 'https://fundresq.com/scams',
+    canonical: 'https://fundoraid.com/scams',
   },
 };
 

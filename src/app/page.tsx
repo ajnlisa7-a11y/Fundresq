@@ -36,7 +36,7 @@ export default function Home() {
       {/* 2. WHAT HAPPENED?: 6 large cards for primary scam types */}
       <WhatNeedHelpWith onSelectCase={(id) => handleOpenIntake(id)} />
 
-      {/* 3. HOW FUNDRESQ CAN HELP: Exactly 3 core services */}
+      {/* 3. HOW FUNDORAID CAN HELP: Exactly 3 core services */}
       <HowWeHelp onOpenIntake={() => handleOpenIntake()} />
 
       {/* 4. WHAT HAPPENS AFTER YOU CONTACT US?: Simplified 4-step process */}

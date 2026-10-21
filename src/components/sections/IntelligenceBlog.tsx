@@ -43,7 +43,7 @@ export function IntelligenceBlog() {
               Guides & Insights
             </span>
             <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight">
-              Fundresq Intelligence
+              Fundoraid Intelligence
             </h2>
           </div>
           <p className="text-xs md:text-sm text-[#9FA3A3] max-w-md leading-relaxed">

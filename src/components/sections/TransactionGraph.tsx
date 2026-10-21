@@ -102,7 +102,7 @@ const TRAIL_NODES: TrailNode[] = [
     network: 'Recipient Platform (ID Verified)',
     volume: '84.80 ETH ($288,320)',
     timestamp: '14 May 2026 05:08:44 UTC',
-    findings: 'Where the funds landed: An identified recipient endpoint where Fundresq takes direct action to recover your scam funds.',
+    findings: 'Where the funds landed: An identified recipient endpoint where Fundoraid takes direct action to recover your scam funds.',
     cx: 560,
     cy: 250,
   },

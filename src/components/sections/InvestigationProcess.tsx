@@ -26,7 +26,7 @@ export function InvestigationProcess({ onOpenIntake }: { onOpenIntake: () => voi
     {
       step: 'Step 4',
       title: 'Recover Your Scam Funds',
-      description: 'Fundresq initiates direct recovery actions, coordinating with platforms and using verified transaction records to recover your lost funds.',
+      description: 'Fundoraid initiates direct recovery actions, coordinating with platforms and using verified transaction records to recover your lost funds.',
       icon: FileCheck,
     },
   ];

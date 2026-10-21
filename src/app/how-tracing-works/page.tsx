@@ -136,7 +136,7 @@ export default function HowTracingWorksPage() {
       plainEnglish: 'Structuring findings so cybercrime units and recovery specialists can act immediately.',
       deepDive: [
         'For evidence to be actionable by law enforcement cybercrime divisions or accepted in court proceedings, it must meet strict chain-of-custody and verification standards.',
-        'Fundresq reports include RFC-3161 cryptographic timestamping, verifiable transaction hashes, entity attribution, and a clear executive timeline.',
+        'Fundoraid reports include RFC-3161 cryptographic timestamping, verifiable transaction hashes, entity attribution, and a clear executive timeline.',
         'This allows recovery specialists to apply for disclosure orders or banking evidence applications without delay.'
       ],
       sample: 'Chain of Custody Standard: Verifiable On-Chain Hashes + Cryptographic Timestamps + Forensic Attributions'

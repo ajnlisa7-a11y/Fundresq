@@ -50,7 +50,7 @@ export const MANAGED_WEBSITE_MEDIA: WebsiteMediaItem[] = [
     name: 'Platform Logo & Monogram',
     fileName: 'logo.png',
     section: 'Navigation & Branding',
-    description: 'Primary Fundresq brand logo and monogram mark.',
+    description: 'Primary Fundoraid brand logo and monogram mark.',
     defaultUrl: '/brand-logo.png',
     aspectRatio: 'Square / Vector',
   },

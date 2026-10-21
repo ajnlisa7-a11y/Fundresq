@@ -71,7 +71,7 @@ export function SignsSection() {
 
                   <div className="pt-8 border-t border-white/5 max-w-2xl mx-auto space-y-4">
                     <p className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold">Or contact us directly</p>
-                    <a href="mailto:investigations@fundresq.com" className="inline-flex items-center gap-2 text-[12px] font-black uppercase tracking-[0.3em] text-primary hover:gold-glow transition-all">
+                    <a href="mailto:investigations@fundoraid.com" className="inline-flex items-center gap-2 text-[12px] font-black uppercase tracking-[0.3em] text-primary hover:gold-glow transition-all">
                       <Mail className="w-4 h-4" /> Email Our Investigation Team
                     </a>
                   </div>

@@ -3,13 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 
-interface FundresqLogoProps {
+export interface FundoraidLogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
   showSubtitle?: boolean;
 }
 
-export function FundresqLogo({ className = '', size = 'md', showSubtitle = true }: FundresqLogoProps) {
+export type FundresqLogoProps = FundoraidLogoProps;
+
+export function FundoraidLogo({ className = '', size = 'md', showSubtitle = true }: FundoraidLogoProps) {
   const [logoUrl, setLogoUrl] = useState<string | null>('/logo.png');
   const [imgError, setImgError] = useState(false);
 
@@ -21,7 +23,9 @@ export function FundresqLogo({ className = '', size = 'md', showSubtitle = true 
           .getPublicUrl('logo.png');
         
         if (data?.publicUrl) {
-          const timestamp = typeof window !== 'undefined' ? localStorage.getItem('fundresq_logo_updated') : null;
+          const timestamp = typeof window !== 'undefined' 
+            ? localStorage.getItem('fundoraid_logo_updated') || localStorage.getItem('fundresq_logo_updated') 
+            : null;
           setLogoUrl(timestamp ? `${data.publicUrl}?t=${timestamp}` : data.publicUrl);
           setImgError(false);
         }
@@ -59,12 +63,12 @@ export function FundresqLogo({ className = '', size = 'md', showSubtitle = true 
 
   return (
     <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Monogram F/R brand logo mark */}
+      {/* Monogram brand logo mark */}
       <div className={`relative ${iconSizes[size]} rounded-lg bg-[#191D20] border border-[#252B2F] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(225,93,68,0.2)] group-hover:border-[#E15D44] transition-all duration-300`}>
         {logoUrl && !imgError ? (
           <img
             src={logoUrl}
-            alt="Fundresq Logo"
+            alt="Fundoraid Logo"
             className="w-full h-full object-contain p-0.5"
             onError={() => setImgError(true)}
           />
@@ -110,7 +114,7 @@ export function FundresqLogo({ className = '', size = 'md', showSubtitle = true 
 
       <div className="flex flex-col">
         <span className={`font-headline font-extrabold tracking-tight text-[#F2EFE9] leading-none ${textSizes[size]}`}>
-          FUND<span className="text-[#E15D44] font-bold">RESQ</span>
+          FUND<span className="text-[#E15D44] font-bold">ORAID</span>
         </span>
         {showSubtitle && (
           <span className="text-[7.5px] md:text-[8.5px] font-bold uppercase tracking-[0.28em] text-[#9FA3A3] mt-1">
@@ -121,3 +125,5 @@ export function FundresqLogo({ className = '', size = 'md', showSubtitle = true 
     </div>
   );
 }
+
+export const FundresqLogo = FundoraidLogo;

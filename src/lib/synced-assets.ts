@@ -12,8 +12,10 @@ export function getAssetPublicUrl(fileName: string): string {
     if (!data?.publicUrl) return `/${fileName}`;
     
     if (typeof window !== 'undefined') {
-      const assetKey = `fundresq_asset_${fileName}`;
-      const timestamp = localStorage.getItem(assetKey) || localStorage.getItem('fundresq_assets_updated');
+      const timestamp = localStorage.getItem(`fundoraid_asset_${fileName}`) 
+        || localStorage.getItem('fundoraid_assets_updated')
+        || localStorage.getItem(`fundresq_asset_${fileName}`) 
+        || localStorage.getItem('fundresq_assets_updated');
       return timestamp ? `${data.publicUrl}?t=${timestamp}` : data.publicUrl;
     }
     return data.publicUrl;
@@ -28,8 +30,10 @@ export function getAssetPublicUrl(fileName: string): string {
 export function notifyAssetUpdated(fileName?: string) {
   if (typeof window === 'undefined') return;
   const now = Date.now().toString();
+  localStorage.setItem('fundoraid_assets_updated', now);
   localStorage.setItem('fundresq_assets_updated', now);
   if (fileName) {
+    localStorage.setItem(`fundoraid_asset_${fileName}`, now);
     localStorage.setItem(`fundresq_asset_${fileName}`, now);
   }
   window.dispatchEvent(new Event('branding-updated'));

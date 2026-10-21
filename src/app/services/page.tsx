@@ -6,11 +6,11 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Cryptocurrency Tracing & Fund Recovery Services | Fundresq',
+  title: 'Cryptocurrency Tracing & Fund Recovery Services | Fundoraid',
   description:
-    'Explore Fundresq services: blockchain transaction tracing, wallet security investigations, and direct crypto fund recovery coordination.',
+    'Explore Fundoraid services: blockchain transaction tracing, wallet security investigations, and direct crypto fund recovery coordination.',
   alternates: {
-    canonical: 'https://fundresq.com/services',
+    canonical: 'https://fundoraid.com/services',
   },
 };
 

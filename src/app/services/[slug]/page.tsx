@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return {
-      title: 'Investigation Service | Fundresq',
+      title: 'Investigation Service | Fundoraid',
       description: 'Blockchain transaction tracing and forensic reports.',
     };
   }
@@ -28,13 +28,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.seoTitle,
     description: service.seoDescription,
     alternates: {
-      canonical: `https://fundresq.com/services/${slug}`,
+      canonical: `https://fundoraid.com/services/${slug}`,
     },
     openGraph: {
       title: service.seoTitle,
       description: service.seoDescription,
-      url: `https://fundresq.com/services/${slug}`,
-      siteName: 'Fundresq Forensic Intelligence',
+      url: `https://fundoraid.com/services/${slug}`,
+      siteName: 'Fundoraid Forensic Intelligence',
       type: 'website',
     },
   };

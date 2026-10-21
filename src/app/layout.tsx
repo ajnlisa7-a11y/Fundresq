@@ -5,8 +5,8 @@ import {MouseSpotlight} from '@/components/ui/mouse-spotlight';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Fundresq | Blockchain Transaction Tracing & Evidence Reports',
-  description: 'Lost or stolen cryptocurrency? Fundresq traces transaction histories, identifies where funds moved, and produces clear evidence reports for police, lawyers, and exchanges.',
+  title: 'Fundoraid | Blockchain Transaction Tracing & Evidence Reports',
+  description: 'Lost or stolen cryptocurrency? Fundoraid traces transaction histories, identifies where funds moved, and produces clear evidence reports for police, lawyers, and exchanges.',
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -55,8 +55,8 @@ export default function RootLayout({
                     event.target.src && event.target.src.indexOf('/_next/static/') !== -1
                   );
                   if (isChunkError) {
-                    var reloadKey = 'fundresq_chunk_recovery';
-                    var lastReload = sessionStorage.getItem(reloadKey);
+                    var reloadKey = 'fundoraid_chunk_recovery';
+                    var lastReload = sessionStorage.getItem(reloadKey) || sessionStorage.getItem('fundresq_chunk_recovery');
                     var now = Date.now();
                     if (!lastReload || (now - parseInt(lastReload, 10)) > 10000) {
                       sessionStorage.setItem(reloadKey, String(now));

@@ -12,7 +12,7 @@ export function FAQSection() {
       a: 'Yes. Major blockchains like Bitcoin, Ethereum, Tron, and Solana are permanent public ledgers. Every transaction is recorded forever. We follow the movement of funds from your wallet through any intermediate transfers, swaps, and bridges directly to the destination accounts where the scammer diverted them.',
     },
     {
-      q: 'How does Fundresq help recover stolen cryptocurrency?',
+      q: 'How does Fundoraid help recover stolen cryptocurrency?',
       a: 'We locate the diverted digital assets across blockchains and take direct action to recover your scam funds.',
     },
     {
@@ -25,7 +25,7 @@ export function FAQSection() {
     },
     {
       q: 'Do I have to take your findings to a solicitor myself?',
-      a: 'No. Unlike passive firms that simply sell you a PDF and leave you to find and pay a solicitor, Fundresq is built to help recover your lost funds directly. We locate where your money went and take direct action to recover your scam funds.',
+      a: 'No. Unlike passive firms that simply sell you a PDF and leave you to find and pay a solicitor, Fundoraid is built to help recover your lost funds directly. We locate where your money went and take direct action to recover your scam funds.',
     },
   ];
 

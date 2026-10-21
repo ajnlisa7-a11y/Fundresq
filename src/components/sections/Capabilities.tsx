@@ -80,7 +80,7 @@ export function Capabilities({ onOpenIntake }: CapabilitiesProps) {
             What We Investigate
           </span>
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-4">
-            What Fundresq investigates
+            What Fundoraid investigates
           </h2>
           <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
             Clear, structured investigations for individuals, businesses, and legal matters.

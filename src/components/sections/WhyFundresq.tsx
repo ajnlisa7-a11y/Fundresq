@@ -3,7 +3,7 @@
 import { ShieldCheck, Target, Eye, Lock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export function WhyFundresq({ onOpenIntake }: { onOpenIntake: () => void }) {
+export function WhyFundoraid({ onOpenIntake }: { onOpenIntake: () => void }) {
   const principles = [
     {
       title: 'We start with evidence',
@@ -28,7 +28,7 @@ export function WhyFundresq({ onOpenIntake }: { onOpenIntake: () => void }) {
   ];
 
   return (
-    <section id="why-fundresq" className="py-24 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
+    <section id="why-fundoraid" className="py-24 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-[10px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
@@ -80,3 +80,5 @@ export function WhyFundresq({ onOpenIntake }: { onOpenIntake: () => void }) {
     </section>
   );
 }
+
+export const WhyFundresq = WhyFundoraid;

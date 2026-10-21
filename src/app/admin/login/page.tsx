@@ -30,7 +30,9 @@ export default function AdminLoginPage() {
         .getPublicUrl('logo.png');
       
       if (data?.publicUrl) {
-        const timestamp = typeof window !== 'undefined' ? localStorage.getItem('fundresq_logo_updated') : null;
+        const timestamp = typeof window !== 'undefined' 
+          ? localStorage.getItem('fundoraid_logo_updated') || localStorage.getItem('fundresq_logo_updated') 
+          : null;
         setLogoUrl(timestamp ? `${data.publicUrl}?t=${timestamp}` : data.publicUrl);
       }
     } catch (error) {
@@ -94,7 +96,7 @@ export default function AdminLoginPage() {
               <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Admin Email</Label>
               <Input
                 type="email"
-                placeholder="investigator@fundresq.com"
+                placeholder="investigator@fundoraid.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-background/50 border-white/10 rounded-none"

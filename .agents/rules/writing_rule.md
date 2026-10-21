@@ -1,11 +1,11 @@
-# Fundresq Writing Rule
+# Fundoraid Writing Rule
 
 ## Core Principle
 **Write for someone who has never used a blockchain explorer.**
 
-The visitor may have just lost money. They are distressed, cautious, and seeking clear answers. They should never be forced to decipher technical jargon before understanding whether Fundresq can help them.
+The visitor may have just lost money. They are distressed, cautious, and seeking clear answers. They should never be forced to decipher technical jargon before understanding whether Fundoraid can help them.
 
-Fundresq should sound like someone who has seen complicated situations before and knows how to investigate them.
+Fundoraid should sound like someone who has seen complicated situations before and knows how to investigate them.
 
 ---
 
@@ -23,7 +23,7 @@ Fundresq should sound like someone who has seen complicated situations before an
 > If not, rewrite it.
 
 ### Example:
-- ❌ *“Fundresq leverages advanced multi-chain forensic intelligence to identify transactional pathways and establish asset attribution.”*
+- ❌ *“Fundoraid leverages advanced multi-chain forensic intelligence to identify transactional pathways and establish asset attribution.”*
 - ✅ *“We follow cryptocurrency transactions to understand where relevant funds moved.”*
 
 Same capability. Far more trust.
@@ -47,5 +47,5 @@ Same capability. Far more trust.
 
 3. **Zero False Promises & Zero Recovery Guarantees**
    - Explicitly warn against advance-fee recovery scammers.
-   - Clearly state that Fundresq is an independent tracing and investigation practice, not a law firm or a "hack-back" recovery scheme.
+   - Clearly state that Fundoraid is an independent tracing and investigation practice, not a law firm or a "hack-back" recovery scheme.
    - Emphasize facts, transparency, and actionable evidence.

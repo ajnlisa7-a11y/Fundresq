@@ -61,15 +61,15 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       narrative:
         'A client deposited 58,000 USDT across four months into an offshore trading platform claiming to execute high-frequency crypto arbitrage. When the balance reached $140,000, the platform demanded an advance $15,000 "tax deposit" to release the funds.',
       findings:
-        'Fundresq proved the platform never traded the funds. Each deposit was instantly forwarded within 4 minutes to a high-volume consolidation cluster on the Tron network, with 46,000 USDT deposited into two verified accounts.',
+        'Fundoraid proved the platform never traded the funds. Each deposit was instantly forwarded within 4 minutes to a high-volume consolidation cluster on the Tron network, with 46,000 USDT deposited into two verified accounts.',
       outcome:
-        'Fundresq identified where the scammer diverted the money and initiated direct recovery proceedings for the client.',
+        'Fundoraid identified where the scammer diverted the money and initiated direct recovery proceedings for the client.',
     },
     faqs: [
       {
         question: 'Can you get my investment back directly?',
         answer:
-          'Fundresq locates where your funds were sent across blockchains and takes direct action to pursue the recovery of your scam funds.',
+          'Fundoraid locates where your funds were sent across blockchains and takes direct action to pursue the recovery of your scam funds.',
       },
       {
         question: 'Should I pay the withdrawal fee or tax requested by the platform?',
@@ -82,7 +82,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
           'The transaction IDs (TxIDs or hashes) of your deposits, your outgoing wallet address, and any URLs or platform communications you preserved.',
       },
     ],
-    seoTitle: 'Investment Scam Tracing & Investigation | Fundresq',
+    seoTitle: 'Investment Scam Tracing & Investigation | Fundoraid',
     seoDescription:
       'Investigate fake cryptocurrency investment platforms. We trace where your funds moved, identify recipient exchange accounts, and deliver court-ready evidence reports.',
   },
@@ -122,7 +122,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       narrative:
         'A victim was contacted on a professional networking app by an individual who claimed to be an experienced commodities trader. Over three months, the contact convinced the victim to connect their Web3 wallet to a fake decentralized finance (DeFi) liquidity mining pool.',
       findings:
-        'Fundresq identified that the smart contract had granted unlimited spend approval to the scammer. We mapped the transfer of 84,000 USDC through two decentralized swap routers and traced the final funds to a verified deposit address at a major overseas exchange.',
+        'Fundoraid identified that the smart contract had granted unlimited spend approval to the scammer. We mapped the transfer of 84,000 USDC through two decentralized swap routers and traced the final funds to a verified deposit address at a major overseas exchange.',
       outcome:
         'The victim submitted our comprehensive report directly to the FBI IC3 and local law enforcement, who issued a formal evidence preservation request to the exchange.',
     },
@@ -140,10 +140,10 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       {
         question: 'Can police take action on a romance scam report?',
         answer:
-          'Police often struggle to investigate raw blockchain hashes without clear documentation. When provided with a Fundresq report detailing verified accounts and timelines, authorities and recovery teams have actionable evidence to pursue the stolen assets.',
+          'Police often struggle to investigate raw blockchain hashes without clear documentation. When provided with a Fundoraid report detailing verified accounts and timelines, authorities and recovery teams have actionable evidence to pursue the stolen assets.',
       },
     ],
-    seoTitle: 'Romance Scam Crypto Tracing & Investigation | Fundresq',
+    seoTitle: 'Romance Scam Crypto Tracing & Investigation | Fundoraid',
     seoDescription:
       'Traced funds for romance and pig-butchering crypto scams. We follow the transaction trail, identify recipient exchanges, and provide verified evidence for police reports.',
   },
@@ -183,9 +183,9 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       narrative:
         'An individual deposited Bitcoin and USDT into what appeared to be an institutional crypto futures trading platform. Within 60 days, the platform interface displayed a balance of $310,000. When requesting a withdrawal of $50,000, the user was told their account was flagged for "money laundering" and required a $30,000 compliance bond.',
       findings:
-        'Fundresq proved that the platform never opened any positions on-chain. The user’s Bitcoin deposits were moved within 30 minutes of receipt into an unhosted wallet cluster, and the USDT was consolidated and transferred to an identified deposit wallet.',
+        'Fundoraid proved that the platform never opened any positions on-chain. The user’s Bitcoin deposits were moved within 30 minutes of receipt into an unhosted wallet cluster, and the USDT was consolidated and transferred to an identified deposit wallet.',
       outcome:
-        'Fundresq proved the fraud, traced the transferred assets to the recipient account, and initiated recovery actions that prevented further loss and began the recovery of the $112,000.',
+        'Fundoraid proved the fraud, traced the transferred assets to the recipient account, and initiated recovery actions that prevented further loss and began the recovery of the $112,000.',
     },
     faqs: [
       {
@@ -201,10 +201,10 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       {
         question: 'Do I have to hire an outside solicitor to recover my funds?',
         answer:
-          'No. Fundresq manages the investigation and recovery process directly. We trace the blockchain trail and take direct action to recover your scam funds.',
+          'No. Fundoraid manages the investigation and recovery process directly. We trace the blockchain trail and take direct action to recover your scam funds.',
       },
     ],
-    seoTitle: 'Fake Trading Platform Crypto Investigation | Fundresq',
+    seoTitle: 'Fake Trading Platform Crypto Investigation | Fundoraid',
     seoDescription:
       'Investigate fake crypto trading portals and withheld withdrawals. We trace where your actual funds went and provide verified evidence for police and legal counsel.',
   },
@@ -244,7 +244,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       narrative:
         'A user intended to participate in an upcoming blockchain token presale, but clicked a sponsored search engine ad linking to a clone of the official project website, sending 10 ETH to a fraudulent contract.',
       findings:
-        'Fundresq tracked the funds through a decentralized token swap into DAI and then through a cross-chain bridge into a destination wallet on Polygon, where funds were transferred to an exchange deposit address.',
+        'Fundoraid tracked the funds through a decentralized token swap into DAI and then through a cross-chain bridge into a destination wallet on Polygon, where funds were transferred to an exchange deposit address.',
       outcome:
         'Delivered a verified transaction trail identifying the exchange deposit account, submitted to national fraud authorities.',
     },
@@ -265,7 +265,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
           'Click "Start a Case" and share your transaction hashes and wallet address. We will review your details confidentially and let you know what can be traced.',
       },
     ],
-    seoTitle: 'Cryptocurrency Scam Tracing & Investigation | Fundresq',
+    seoTitle: 'Cryptocurrency Scam Tracing & Investigation | Fundoraid',
     seoDescription:
       'Professional cryptocurrency scam investigation. We trace stolen Bitcoin, Ethereum, and USDT across blockchains to identify destination exchange accounts.',
   },
@@ -305,9 +305,9 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       narrative:
         'A cryptocurrency investor signed what appeared to be a standard Web3 login signature on a fraudulent portfolio tracker. Within two minutes, all tokens and liquidity positions were drained across 14 consecutive transactions.',
       findings:
-        'Fundresq identified the drainer contract address, mapped the conversion of altcoins via decentralized aggregators, and tracked the payout cluster directly to recipient endpoints.',
+        'Fundoraid identified the drainer contract address, mapped the conversion of altcoins via decentralized aggregators, and tracked the payout cluster directly to recipient endpoints.',
       outcome:
-        'Fundresq initiated immediate recovery procedures against the recipient accounts, securing actionable intervention to recover the stolen assets.',
+        'Fundoraid initiated immediate recovery procedures against the recipient accounts, securing actionable intervention to recover the stolen assets.',
     },
     faqs: [
       {
@@ -326,7 +326,7 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
           'Yes. By reviewing the transaction data and smart contract interactions on-chain, we can usually determine whether the theft was caused by a malicious contract approval or a direct private key compromise.',
       },
     ],
-    seoTitle: 'Wallet Hack & Drainer Investigation | Fundresq',
+    seoTitle: 'Wallet Hack & Drainer Investigation | Fundoraid',
     seoDescription:
       'Investigate drained crypto wallets and unauthorized transfers. We trace stolen tokens across DEX swaps and bridges to destination exchange accounts.',
   },
@@ -366,9 +366,9 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
       narrative:
         'A user copied a recipient address to send 1.2 BTC, but clipboard malware on their computer replaced the address with an attacker’s wallet, causing the funds to be sent to a thief.',
       findings:
-        'Fundresq mapped the stolen Bitcoin through a series of peel chain transactions across 18 hops, identifying that 0.85 BTC was sent directly to a deposit address at an exchange requiring Know Your Customer (KYC) identity verification.',
+        'Fundoraid mapped the stolen Bitcoin through a series of peel chain transactions across 18 hops, identifying that 0.85 BTC was sent directly to a deposit address at an exchange requiring Know Your Customer (KYC) identity verification.',
       outcome:
-        'Fundresq identified the KYC-verified account holding the funds, providing actionable records to initiate the recovery of the stolen Bitcoin.',
+        'Fundoraid identified the KYC-verified account holding the funds, providing actionable records to initiate the recovery of the stolen Bitcoin.',
     },
     faqs: [
       {
@@ -382,12 +382,12 @@ export const SCAMS_DATA: Record<string, ScamDetails> = {
           'Record the transaction IDs, secure any other wallets you own on a clean device, preserve communications or computer logs, and do not communicate with unsolicited "recovery hackers" on social media.',
       },
       {
-        question: 'How do police and exchanges respond to Fundresq reports?',
+        question: 'How do police and exchanges respond to Fundoraid reports?',
         answer:
-          'Police and exchanges require objective, verifiable proof before they can take action. Fundresq provides standard forensic documentation that compliance officers and detectives can immediately verify and use.',
+          'Police and exchanges require objective, verifiable proof before they can take action. Fundoraid provides standard forensic documentation that compliance officers and detectives can immediately verify and use.',
       },
     ],
-    seoTitle: 'Stolen Cryptocurrency Tracing & Investigation | Fundresq',
+    seoTitle: 'Stolen Cryptocurrency Tracing & Investigation | Fundoraid',
     seoDescription:
       'Trace stolen Bitcoin, Ethereum, and crypto assets. We follow the on-chain trail to identify recipient exchanges and provide evidence for police and legal action.',
   },

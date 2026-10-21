@@ -202,7 +202,9 @@ export default function AdminDashboard() {
         .getPublicUrl('logo.png');
       
       if (data?.publicUrl) {
-        const timestamp = typeof window !== 'undefined' ? localStorage.getItem('fundresq_logo_updated') : null;
+        const timestamp = typeof window !== 'undefined' 
+          ? localStorage.getItem('fundoraid_logo_updated') || localStorage.getItem('fundresq_logo_updated') 
+          : null;
         setLogoUrl(timestamp ? `${data.publicUrl}?t=${timestamp}` : data.publicUrl);
       }
     } catch (error) {
@@ -217,7 +219,9 @@ export default function AdminDashboard() {
         .getPublicUrl('hero-bg.png');
       
       if (data?.publicUrl) {
-        const timestamp = typeof window !== 'undefined' ? localStorage.getItem('fundresq_hero_updated') || localStorage.getItem('fundresq_assets_updated') || Date.now().toString() : Date.now().toString();
+        const timestamp = typeof window !== 'undefined' 
+          ? localStorage.getItem('fundoraid_hero_updated') || localStorage.getItem('fundoraid_assets_updated') || localStorage.getItem('fundresq_hero_updated') || localStorage.getItem('fundresq_assets_updated') || Date.now().toString() 
+          : Date.now().toString();
         setHeroBgUrl(`${data.publicUrl}?t=${timestamp}`);
       }
     } catch (error) {
@@ -330,6 +334,7 @@ export default function AdminDashboard() {
 
       const timestamp = Date.now().toString();
       if (typeof window !== 'undefined') {
+        localStorage.setItem('fundoraid_logo_updated', timestamp);
         localStorage.setItem('fundresq_logo_updated', timestamp);
         window.dispatchEvent(new Event('branding-updated'));
       }
@@ -376,6 +381,9 @@ export default function AdminDashboard() {
 
       const timestamp = Date.now().toString();
       if (typeof window !== 'undefined') {
+        localStorage.setItem('fundoraid_hero_updated', timestamp);
+        localStorage.setItem('fundoraid_assets_updated', timestamp);
+        localStorage.setItem('fundoraid_asset_hero-bg.png', timestamp);
         localStorage.setItem('fundresq_hero_updated', timestamp);
         localStorage.setItem('fundresq_assets_updated', timestamp);
         localStorage.setItem('fundresq_asset_hero-bg.png', timestamp);

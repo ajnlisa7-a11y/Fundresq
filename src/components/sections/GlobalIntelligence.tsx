@@ -22,7 +22,7 @@ export function GlobalIntelligence() {
             <span className="text-[#E15D44] italic">So do transaction trails.</span>
           </h2>
           <p className="text-base md:text-lg text-[#9FA3A3] leading-relaxed max-w-2xl mx-auto font-normal">
-            Funds can move between wallets, platforms, blockchains and countries quickly. Fundresq investigates the available transaction trail wherever it leads, subject to the scope of the case and available data.
+            Funds can move between wallets, platforms, blockchains and countries quickly. Fundoraid investigates the available transaction trail wherever it leads, subject to the scope of the case and available data.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export function GlobalIntelligence() {
         </div>
 
         <div className="text-center text-xs text-[#9FA3A3]/80 max-w-xl mx-auto">
-          Please note: Fundresq focuses on tracing diverted cryptocurrency transactions and executing direct scam fund recovery actions.
+          Please note: Fundoraid focuses on tracing diverted cryptocurrency transactions and executing direct scam fund recovery actions.
         </div>
       </div>
     </section>

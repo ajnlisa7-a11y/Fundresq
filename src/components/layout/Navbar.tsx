@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { FundresqLogo } from '@/components/ui/fundresq-logo';
+import { FundoraidLogo } from '@/components/ui/fundresq-logo';
 
 interface NavbarProps {
   onOpenIntake?: () => void;
@@ -42,7 +42,7 @@ export function Navbar({ onOpenIntake }: NavbarProps) {
         
         {/* Brand Monogram & Wordmark */}
         <Link href="/" className="group shrink-0">
-          <FundresqLogo size="md" />
+          <FundoraidLogo size="md" />
         </Link>
 
         {/* Desktop Nav Items */}

@@ -24,7 +24,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
       howWeHelped:
         'We traced the initial deposit through three intermediate wallets, identifying the destination account holding the funds.',
       outcome:
-        'Fundresq identified the destination account, initiated direct recovery proceedings, and secured the recovery of the $48,000.',
+        'Fundoraid identified the destination account, initiated direct recovery proceedings, and secured the recovery of the $48,000.',
       icon: TrendingDown,
     },
     {
@@ -36,7 +36,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
       howWeHelped:
         'We mapped every individual transfer across the Tron network, aggregating all transactions into a single chronological timeline showing the scammer’s collection wallet.',
       outcome:
-        'Fundresq mapped the scammer’s collection wallet, submitted verified asset recovery documentation, and initiated the recovery of the scam funds.',
+        'Fundoraid mapped the scammer’s collection wallet, submitted verified asset recovery documentation, and initiated the recovery of the scam funds.',
       icon: UserX,
     },
     {
@@ -48,7 +48,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
       howWeHelped:
         'We followed the stolen tokens through decentralized token swaps and cross-chain bridges, documenting the conversion trail back into Bitcoin.',
       outcome:
-        'Fundresq tracked the bridge conversion into Bitcoin, identified the consolidation address, and executed recovery actions to reclaim the lost assets.',
+        'Fundoraid tracked the bridge conversion into Bitcoin, identified the consolidation address, and executed recovery actions to reclaim the lost assets.',
       icon: ShieldAlert,
     },
   ];
@@ -166,7 +166,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
               </h3>
 
               <p className="text-sm md:text-base text-[#9FA3A3] leading-relaxed">
-                We don't just hand you a paper report and leave you on your own. Fundresq actively traces your cryptocurrency, pinpoints the recipient accounts, and takes direct action to recover your scam funds.
+                We don't just hand you a paper report and leave you on your own. Fundoraid actively traces your cryptocurrency, pinpoints the recipient accounts, and takes direct action to recover your scam funds.
               </p>
 
               <div className="pt-2">
