@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { FundoraidLogo } from '@/components/ui/fundresq-logo';
-import { ArrowRight, Lock } from 'lucide-react';
+import { ArrowRight, Lock, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
@@ -39,8 +39,19 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
             <p className="text-xs text-[#9FA3A3] leading-relaxed pt-2">
               Blockchain transaction tracing and cryptocurrency recovery. We track stolen digital assets, pinpoint recipient accounts, and coordinate the recovery of your cryptocurrency.
             </p>
-            <div className="flex items-center gap-2 text-[10px] font-mono text-[#E15D44] pt-2">
+            <div className="flex items-center gap-2 text-[10px] font-mono text-[#E15D44] pt-1">
               <Lock className="w-3.5 h-3.5" /> Strictly Confidential Intake
+            </div>
+            <div className="pt-3 border-t border-[#252B2F] space-y-1.5">
+              <div className="flex items-center gap-1.5 text-[#F2EFE9] font-mono text-[11px] font-bold uppercase tracking-wider">
+                <MapPin className="w-3.5 h-3.5 text-[#E15D44] shrink-0" />
+                <span>Headquarters</span>
+              </div>
+              <address className="not-italic text-[11px] text-[#9FA3A3] leading-relaxed font-mono">
+                Baarerstrasse 43<br />
+                6300 Zug<br />
+                Switzerland
+              </address>
             </div>
           </div>
 
@@ -112,7 +123,12 @@ export function Footer({ onOpenIntake }: { onOpenIntake?: () => void }) {
             <div>
               © 2026 Fundoraid. All rights reserved.
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <span className="flex items-center gap-1.5 text-[#F2EFE9]/90">
+                <MapPin className="w-3 h-3 text-[#E15D44]" />
+                Baarerstrasse 43, 6300 Zug, Switzerland
+              </span>
+              <span>•</span>
               <span>Delaware Registered Forensic Entity</span>
               <span>•</span>
               <span className="text-[#61B58A]">EVM • UTXO • Solana • Cross-Chain</span>

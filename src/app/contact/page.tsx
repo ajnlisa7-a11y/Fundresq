@@ -12,7 +12,8 @@ import {
   ShieldCheck, 
   Building, 
   Loader2,
-  Lock
+  Lock,
+  MapPin
 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -150,6 +151,28 @@ export default function ContactPage() {
                   </Card>
 
                   <div className="grid grid-cols-1 gap-3.5">
+                    <Card className="bg-[#111416] border border-[#E15D44]/40 p-5 rounded-xl shadow-lg relative overflow-hidden">
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-[#E15D44]/15 flex items-center justify-center shrink-0 border border-[#E15D44]/30 mt-0.5">
+                          <MapPin className="w-5 h-5 text-[#E15D44]" />
+                        </div>
+                        <div className="space-y-1 flex-1">
+                          <div className="flex items-center justify-between gap-2">
+                            <p className="text-xs font-bold text-[#F2EFE9] uppercase tracking-wider">Company Headquarters</p>
+                            <span className="text-[9px] font-mono uppercase px-2 py-0.5 rounded bg-[#E15D44]/20 text-[#E15D44] font-semibold border border-[#E15D44]/30">
+                              Switzerland
+                            </span>
+                          </div>
+                          <address className="not-italic text-sm text-[#F2EFE9] font-medium leading-relaxed font-mono pt-1">
+                            Zug<br />
+                            Baarerstrasse 43<br />
+                            6300 Zug<br />
+                            Switzerland
+                          </address>
+                        </div>
+                      </div>
+                    </Card>
+
                     {[
                       { city: "London", region: "UK & European Enquiries", icon: Building },
                       { city: "Delaware", region: "US Corporate Entity", icon: Building },
