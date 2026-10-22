@@ -151,7 +151,7 @@ export function Navbar({ onOpenIntake }: NavbarProps) {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-[#111416] border-b border-[#252B2F] px-6 py-6 space-y-4">
+        <div className="lg:hidden bg-[#111416] border-b border-[#252B2F] px-6 py-6 space-y-4 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
           <div className="flex flex-col space-y-2 font-mono text-xs uppercase tracking-wider">
             
             {/* Mobile Scams Accordion */}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { 
   Dialog, 
   DialogContent, 
@@ -323,6 +323,15 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
   const [urgentTriggerChecked, setUrgentTriggerChecked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Auto scroll to top when changing steps
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+  }, [step]);
+
   // Sync preselectedIncident if it changes when modal opens
   useEffect(() => {
     if (preselectedIncident) {
@@ -330,6 +339,20 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
       setIncidentType(normalized);
     }
   }, [preselectedIncident]);
+
+  // Temporarily hide floating chat widget when modal is open so buttons are completely unobstructed
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const tawk = (window as any).Tawk_API;
+      if (tawk) {
+        if (isOpen) {
+          try { tawk.hideWidget?.(); } catch (e) {}
+        } else {
+          try { tawk.showWidget?.(); } catch (e) {}
+        }
+      }
+    }
+  }, [isOpen]);
 
   const activeProfile = CASE_PROFILES[incidentType] || CASE_PROFILES.investment_scam;
 
@@ -402,23 +425,23 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-2xl bg-[#111416] border-[#252B2F] text-[#F2EFE9] p-6 md:p-8 rounded-xl shadow-2xl">
-        <DialogHeader className="mb-4">
-          <div className="flex items-center justify-between pb-2 border-b border-[#252B2F]">
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#E15D44]">
-              <Lock className="w-3.5 h-3.5" /> Confidential Case Review
+      <DialogContent className="w-[calc(100vw-1rem)] sm:w-full max-w-2xl max-h-[92dvh] sm:max-h-[88vh] bg-[#111416] border-[#252B2F] text-[#F2EFE9] p-0 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <DialogHeader className="p-4 sm:p-6 pb-3 sm:pb-4 border-b border-[#252B2F] shrink-0 text-left">
+          <div className="flex items-center justify-between pb-2 border-b border-[#252B2F]/60">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-[#E15D44]">
+              <Lock className="w-3 sm:w-3.5 h-3 sm:h-3.5" /> Confidential Case Review
             </div>
             {!submitted && (
-              <span className="text-xs font-mono text-[#9FA3A3]">
+              <span className="text-[10px] sm:text-xs font-mono text-[#9FA3A3]">
                 Step {step} of 4 · <span className="text-[#E15D44] font-bold">{activeProfile.label}</span>
               </span>
             )}
           </div>
 
-          <DialogTitle className="text-xl md:text-2xl font-headline font-bold text-[#F2EFE9] pt-2">
+          <DialogTitle className="text-lg sm:text-2xl font-headline font-bold text-[#F2EFE9] pt-2">
             {submitted ? activeProfile.successTitle : 'Start Recovery Case'}
           </DialogTitle>
-          <DialogDescription className="text-[#9FA3A3] text-xs md:text-sm">
+          <DialogDescription className="text-[#9FA3A3] text-xs sm:text-sm">
             {submitted 
               ? activeProfile.successActionText
               : 'Share a few details about your situation. We will trace the transaction trail, identify recipient accounts, and initiate recovery action.'}
@@ -426,17 +449,17 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
         </DialogHeader>
 
         {submitted ? (
-          <div className="py-8 text-center space-y-6">
-            <div className="w-16 h-16 rounded-full bg-[#E15D44]/10 border border-[#E15D44]/30 flex items-center justify-center mx-auto text-[#E15D44]">
-              <CheckCircle2 className="w-8 h-8 text-[#61B58A]" />
+          <div className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 py-6 sm:py-8 text-center space-y-5 sm:space-y-6">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#E15D44]/10 border border-[#E15D44]/30 flex items-center justify-center mx-auto text-[#E15D44]">
+              <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8 text-[#61B58A]" />
             </div>
             <div className="space-y-2">
-              <h4 className="text-lg font-bold text-[#F2EFE9]">Reference Number: FR-{Math.floor(100000 + Math.random() * 900000)}</h4>
+              <h4 className="text-base sm:text-lg font-bold text-[#F2EFE9]">Reference Number: FR-{Math.floor(100000 + Math.random() * 900000)}</h4>
               <p className="text-xs text-[#9FA3A3] max-w-md mx-auto leading-relaxed">
                 {activeProfile.successActionText} You will receive a direct case assessment by email within 24 hours.
               </p>
             </div>
-            <div className="p-4 rounded-lg bg-[#090B0C] border border-[#252B2F] text-left text-xs font-mono space-y-1.5 max-w-md mx-auto">
+            <div className="p-3.5 sm:p-4 rounded-lg bg-[#090B0C] border border-[#252B2F] text-left text-xs font-mono space-y-1.5 max-w-md mx-auto">
               <div className="text-[#9FA3A3]">Status: <span className="text-[#61B58A]">CONFIDENTIAL & IN RECOVERY QUEUE</span></div>
               <div className="text-[#9FA3A3]">Recovery Category: <span className="text-[#F2EFE9]">{activeProfile.label}</span></div>
               <div className="text-[#9FA3A3]">Case Strategy: <span className="text-[#E15D44]">{activeProfile.badge}</span></div>
@@ -447,13 +470,14 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
             </Button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Step 1: Incident Categorization */}
-            {step === 1 && (
-              <div className="space-y-4">
-                <label className="text-xs font-bold uppercase tracking-widest text-[#9FA3A3] block">
-                  What best describes the incident?
-                </label>
+          <form onSubmit={handleSubmit} className="flex flex-col flex-1 min-h-0 overflow-hidden">
+            <div ref={scrollContainerRef} className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 space-y-4 sm:space-y-5">
+              {/* Step 1: Incident Categorization */}
+              {step === 1 && (
+                <div className="space-y-3 sm:space-y-4">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#9FA3A3] block">
+                    What best describes the incident?
+                  </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {incidentList.map((opt) => {
                     const Icon = opt.icon;
@@ -504,15 +528,15 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
                   <label className="text-xs font-bold uppercase tracking-widest text-[#9FA3A3] block mb-2">
                     {activeProfile.timingQuestion}
                   </label>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     {activeProfile.timingOptions.map((t) => (
                       <button
                         key={t.id}
                         type="button"
                         onClick={() => setTimeline(t.id)}
-                        className={`p-3 rounded-lg border text-center text-xs transition-all ${
+                        className={`p-2.5 sm:p-3 rounded-lg border text-left sm:text-center text-xs transition-all ${
                           timeline === t.id
-                            ? 'border-[#E15D44] bg-[#090B0C] text-[#F2EFE9]'
+                            ? 'border-[#E15D44] bg-[#090B0C] text-[#F2EFE9] ring-1 ring-[#E15D44]'
                             : 'border-[#252B2F] bg-[#191D20] text-[#9FA3A3] hover:border-[#E15D44]/40'
                         }`}
                       >
@@ -700,14 +724,16 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
               </div>
             )}
 
-            {/* Modal Navigation Buttons */}
-            <div className="flex items-center justify-between pt-4 border-t border-[#252B2F]">
+            </div>
+
+            {/* Sticky Modal Navigation Buttons */}
+            <div className="shrink-0 flex items-center justify-between p-4 sm:p-6 pt-3 sm:pt-4 border-t border-[#252B2F] bg-[#0E1113]">
               {step > 1 ? (
                 <Button
                   type="button"
                   variant="outline"
                   onClick={handlePrev}
-                  className="border-[#252B2F] text-xs font-bold uppercase tracking-widest text-[#9FA3A3]"
+                  className="border-[#252B2F] text-xs font-bold uppercase tracking-widest text-[#9FA3A3] h-10 px-4"
                 >
                   <ArrowLeft className="w-3.5 h-3.5 mr-1" /> Back
                 </Button>
@@ -719,14 +745,14 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
                 <Button
                   type="button"
                   onClick={handleNext}
-                  className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-6"
+                  className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-6 h-10 shadow-lg shadow-[#E15D44]/20"
                 >
                   Continue <ArrowRight className="w-3.5 h-3.5 ml-1" />
                 </Button>
               ) : (
                 <Button
                   type="submit"
-                  className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-8 shadow-lg shadow-[#E15D44]/20"
+                  className="bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] text-xs font-bold uppercase tracking-widest px-6 sm:px-8 shadow-lg shadow-[#E15D44]/20 h-10"
                 >
                   {activeProfile.submitButtonText} <ArrowRight className="w-3.5 h-3.5 ml-1" />
                 </Button>

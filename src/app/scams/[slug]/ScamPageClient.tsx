@@ -350,7 +350,7 @@ export function ScamPageClient({ scam }: ScamPageClientProps) {
 
             <Button
               onClick={handleOpenIntake}
-              className="h-13 px-9 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
+              className="w-full sm:w-auto h-13 px-9 bg-[#E15D44] text-[#F2EFE9] hover:bg-[#F0836D] hover:text-[#090B0C] font-bold text-xs uppercase tracking-widest shadow-xl shadow-[#E15D44]/25 rounded-lg group transition-colors"
             >
               Start Recovery Process
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

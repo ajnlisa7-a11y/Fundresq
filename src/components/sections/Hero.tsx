@@ -20,7 +20,7 @@ export function Hero({ onOpenIntake }: HeroProps) {
   };
 
   return (
-    <section className="relative pt-36 pb-24 md:pt-48 md:pb-32 bg-[#090B0C] border-b border-[#252B2F] overflow-hidden">
+    <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 md:pt-48 md:pb-32 bg-[#090B0C] border-b border-[#252B2F] overflow-hidden">
       {/* Editorial Investigative Environment Background */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <img
@@ -59,13 +59,13 @@ export function Hero({ onOpenIntake }: HeroProps) {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-[1.05] md:leading-[1] mb-6 md:mb-8">
-            Lost money to a crypto scam? <br />
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-headline font-bold text-[#F2EFE9] tracking-tight leading-[1.08] sm:leading-[1.05] md:leading-[1] mb-6 md:mb-8">
+            Lost money to a crypto scam? <br className="hidden sm:inline" />
             <span className="text-[#E15D44] italic">We trace and recover your lost funds.</span>
           </h1>
 
           {/* Supporting Text */}
-          <p className="text-base sm:text-lg md:text-xl text-[#9FA3A3] max-w-2xl mx-auto leading-relaxed font-normal mb-8 text-balance">
+          <p className="text-sm sm:text-lg md:text-xl text-[#9FA3A3] max-w-2xl mx-auto leading-relaxed font-normal mb-8 text-balance">
             Fundoraid investigates cryptocurrency fraud, traces stolen digital assets across blockchains, and takes direct action to help recover your lost cryptocurrency.
           </p>
 

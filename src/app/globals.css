@@ -34,12 +34,29 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply scroll-smooth;
+    overflow-x: hidden;
+  }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline tracking-tighter;
   }
+}
+
+/* Hide third-party chat widgets when modal/dialog is open so they never obstruct buttons */
+body:has([role="dialog"]) #tawk-default-container,
+body:has([role="dialog"]) .tawk-min-container,
+body:has([role="dialog"]) iframe[title*="chat" i],
+body:has([role="dialog"]) iframe[src*="tawk.to" i] {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
 }
 
 .gradient-text {

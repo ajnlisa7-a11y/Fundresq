@@ -43,10 +43,10 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
   ];
 
   return (
-    <section id="how-we-help" className="py-28 md:py-36 bg-[#111416] border-b border-[#252B2F] relative overflow-hidden">
+    <section id="how-we-help" className="py-16 sm:py-28 md:py-36 bg-[#111416] border-b border-[#252B2F] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <span className="text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
             Our Services
           </span>
@@ -65,7 +65,7 @@ export function HowWeHelp({ onOpenIntake }: HowWeHelpProps) {
             return (
               <div
                 key={service.id}
-                className="p-8 md:p-9 rounded-2xl bg-[#090B0C] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
+                className="p-6 sm:p-8 md:p-9 rounded-2xl bg-[#090B0C] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1"
               >
                 <div>
                   {/* Top Bar: Icon & Step Number */}

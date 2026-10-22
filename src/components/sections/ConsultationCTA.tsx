@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button';
 
 export function ConsultationCTA({ onOpenIntake }: { onOpenIntake: () => void }) {
   return (
-    <section className="py-28 md:py-36 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
+    <section className="py-16 sm:py-28 md:py-36 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
       {/* Background Ambient Lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[550px] bg-[radial-gradient(circle_at_center,rgba(225,93,68,0.08)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto rounded-3xl bg-[radial-gradient(ellipse_at_top,rgba(225,93,68,0.14)_0%,rgba(17,20,22,0.95)_70%)] border border-[#E15D44]/40 p-8 md:p-16 text-center shadow-[0_0_60px_rgba(225,93,68,0.14)] relative overflow-hidden">
+        <div className="max-w-4xl mx-auto rounded-3xl bg-[radial-gradient(ellipse_at_top,rgba(225,93,68,0.14)_0%,rgba(17,20,22,0.95)_70%)] border border-[#E15D44]/40 p-6 sm:p-10 md:p-16 text-center shadow-[0_0_60px_rgba(225,93,68,0.14)] relative overflow-hidden">
           {/* Subtle Vermilion accent beam */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-1 bg-gradient-to-r from-transparent via-[#E15D44] to-transparent" />
 
@@ -19,7 +19,7 @@ export function ConsultationCTA({ onOpenIntake }: { onOpenIntake: () => void }) 
             Confidential
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-6">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-headline font-bold text-[#F2EFE9] tracking-tight mb-6">
             Lost money to a crypto scam? <br className="hidden sm:block" />
             <span className="text-[#E15D44] italic">We trace and recover your lost funds.</span>
           </h2>

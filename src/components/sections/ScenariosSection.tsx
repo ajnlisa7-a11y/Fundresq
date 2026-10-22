@@ -54,10 +54,10 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
   ];
 
   return (
-    <section id="scenarios" className="py-28 md:py-36 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
+    <section id="scenarios" className="py-16 sm:py-28 md:py-36 bg-[#090B0C] border-b border-[#252B2F] relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <span className="text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-[0.25em] text-[#E15D44] block mb-3">
             Case Examples
           </span>
@@ -76,7 +76,7 @@ export function ScenariosSection({ onOpenIntake }: ScenariosSectionProps) {
             return (
               <div
                 key={c.id}
-                className="p-8 md:p-10 rounded-2xl bg-gradient-to-b from-[#111416] via-[#111416] to-[#0c0e10] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5 hover:shadow-[0_15px_45px_rgba(225,93,68,0.18)]"
+                className="p-6 sm:p-8 md:p-10 rounded-2xl bg-gradient-to-b from-[#111416] via-[#111416] to-[#0c0e10] border border-[#252B2F] hover:border-[#E15D44] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1.5 hover:shadow-[0_15px_45px_rgba(225,93,68,0.18)]"
               >
                 <div>
                   {/* Top Bar */}

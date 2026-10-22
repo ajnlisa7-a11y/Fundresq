@@ -225,7 +225,7 @@ export default function HowTracingWorksPage() {
               <article
                 key={topic.id}
                 id={topic.id}
-                className="p-8 md:p-10 rounded-2xl bg-[#111416] border border-[#252B2F] hover:border-[#E15D44]/40 transition-all duration-300 relative overflow-hidden group"
+                className="p-6 sm:p-8 md:p-10 rounded-2xl bg-[#111416] border border-[#252B2F] hover:border-[#E15D44]/40 transition-all duration-300 relative overflow-hidden group"
               >
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                   <div className="flex items-center gap-3">
@@ -258,9 +258,9 @@ export default function HowTracingWorksPage() {
                 </div>
 
                 {/* Technical Sample Box */}
-                <div className="p-3.5 rounded-lg bg-[#090B0C] border border-[#252B2F] font-mono text-[11px] text-[#9FA3A3] flex items-center gap-2 overflow-x-auto">
-                  <span className="text-[#E15D44] font-bold select-none">DATA:</span>
-                  <span className="text-[#F2EFE9]">{topic.sample}</span>
+                <div className="p-3.5 rounded-lg bg-[#090B0C] border border-[#252B2F] font-mono text-[11px] text-[#9FA3A3] flex items-start sm:items-center gap-2 overflow-x-auto">
+                  <span className="text-[#E15D44] font-bold select-none shrink-0">DATA:</span>
+                  <span className="text-[#F2EFE9] break-all">{topic.sample}</span>
                 </div>
               </article>
             );

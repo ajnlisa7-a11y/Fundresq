@@ -130,8 +130,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-20 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
             
             <div className="lg:col-span-2 space-y-8">
@@ -200,7 +200,7 @@ export default function ContactPage() {
 
             <div className="lg:col-span-3">
               <SectionReveal delay={200}>
-                <Card className="bg-[#111416] border border-[#252B2F] rounded-2xl p-8 md:p-10 shadow-2xl">
+                <Card className="bg-[#111416] border border-[#252B2F] rounded-2xl p-5 sm:p-8 md:p-10 shadow-2xl">
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="space-y-1.5">
                       <label className="text-xs font-mono font-bold uppercase text-[#9FA3A3]">Your Name*</label>
