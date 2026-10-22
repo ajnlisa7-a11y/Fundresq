@@ -314,7 +314,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
   const [step, setStep] = useState(1);
   const [incidentType, setIncidentType] = useState(normalizeIncidentId(preselectedIncident));
   const [timeline, setTimeline] = useState('within_30_days');
-  const [estimatedLoss, setEstimatedLoss] = useState('$50,000 - $250,000');
+  const [estimatedLoss, setEstimatedLoss] = useState('');
   const [specialDetail, setSpecialDetail] = useState('');
   const [txDetails, setTxDetails] = useState('');
   const [selectedDocuments, setSelectedDocuments] = useState<string[]>([]);
@@ -418,6 +418,7 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
     setTxDetails('');
     setContactName('');
     setContactEmail('');
+    setEstimatedLoss('');
     onClose();
   };
 
@@ -552,13 +553,15 @@ export function CaseIntakeModal({ isOpen, onClose, preselectedIncident }: CaseIn
                   <label className="text-xs font-bold uppercase tracking-widest text-[#9FA3A3] block mb-2">
                     {activeProfile.valueQuestion}
                   </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {['$10k - $50k', '$50k - $250k', '$250k - $1M', '$1M+'].map((val) => (
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                    {['$1k - $10k', '$10k - $50k', '$50k - $250k', '$250k - $1M', '$1M+'].map((val, idx) => (
                       <button
                         key={val}
                         type="button"
                         onClick={() => setEstimatedLoss(val)}
                         className={`py-2.5 px-3 rounded-lg border text-xs font-mono font-bold transition-all text-center ${
+                          idx === 4 ? 'col-span-2 sm:col-span-1' : ''
+                        } ${
                           estimatedLoss === val
                             ? 'border-[#E15D44] bg-[#090B0C] text-[#E15D44]'
                             : 'border-[#252B2F] bg-[#191D20] text-[#9FA3A3] hover:border-[#E15D44]/40'
