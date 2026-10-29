@@ -6,21 +6,22 @@ import { supabase } from '@/lib/supabase';
 /**
  * Generates the live public URL for a Supabase storage asset with cache-busting timestamp
  */
-export function getAssetPublicUrl(fileName: string): string {
+export function getAssetPublicUrl(fileName: string, fallbackUrl?: string): string {
+  // During SSR / server render, serve the canonical local asset to ensure crawlers and Google Ads see valid images
+  if (typeof window === 'undefined') {
+    return fallbackUrl || (fileName.startsWith('images/') ? `/${fileName}` : `/${fileName}`);
+  }
   try {
     const { data } = supabase.storage.from('assets').getPublicUrl(fileName);
-    if (!data?.publicUrl) return `/${fileName}`;
+    if (!data?.publicUrl) return fallbackUrl || `/${fileName}`;
     
-    if (typeof window !== 'undefined') {
-      const timestamp = localStorage.getItem(`fundoraid_asset_${fileName}`) 
-        || localStorage.getItem('fundoraid_assets_updated')
-        || localStorage.getItem(`fundresq_asset_${fileName}`) 
-        || localStorage.getItem('fundresq_assets_updated');
-      return timestamp ? `${data.publicUrl}?t=${timestamp}` : data.publicUrl;
-    }
-    return data.publicUrl;
+    const timestamp = localStorage.getItem(`fundoraid_asset_${fileName}`) 
+      || localStorage.getItem('fundoraid_assets_updated')
+      || localStorage.getItem(`fundresq_asset_${fileName}`) 
+      || localStorage.getItem('fundresq_assets_updated');
+    return timestamp ? `${data.publicUrl}?t=${timestamp}` : data.publicUrl;
   } catch {
-    return `/${fileName}`;
+    return fallbackUrl || `/${fileName}`;
   }
 }
 

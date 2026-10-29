@@ -11,8 +11,37 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.fundoraid.com'),
   title: 'Fundoraid | Blockchain Transaction Tracing & Evidence Reports',
   description: 'Lost or stolen cryptocurrency? Fundoraid traces transaction histories, identifies where funds moved, and produces clear evidence reports for police, lawyers, and exchanges.',
+  openGraph: {
+    title: 'Fundoraid | Blockchain Transaction Tracing & Evidence Reports',
+    description: 'Lost or stolen cryptocurrency? Fundoraid traces transaction histories, identifies where funds moved, and produces clear evidence reports for police, lawyers, and exchanges.',
+    url: 'https://www.fundoraid.com',
+    siteName: 'Fundoraid',
+    images: [
+      {
+        url: '/images/hero-investigation.jpg',
+        width: 1200,
+        height: 628,
+        alt: 'Fundoraid Blockchain Forensic Investigation',
+      },
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 1200,
+        alt: 'Fundoraid Brand Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fundoraid | Blockchain Transaction Tracing & Evidence Reports',
+    description: 'Lost or stolen cryptocurrency? Fundoraid traces transaction histories, identifies where funds moved, and produces clear evidence reports for police, lawyers, and exchanges.',
+    images: ['/images/hero-investigation.jpg'],
+  },
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
