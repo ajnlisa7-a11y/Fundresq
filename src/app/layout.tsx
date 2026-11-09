@@ -3,6 +3,7 @@ import './globals.css';
 import {Toaster} from '@/components/ui/toaster';
 import {MouseSpotlight} from '@/components/ui/mouse-spotlight';
 import Script from 'next/script';
+import {Analytics} from '@vercel/analytics/next';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -153,6 +154,7 @@ export default function RootLayout({
           `}
         </Script>
         {/* End of Tawk.to Script */}
+        <Analytics />
       </body>
     </html>
   );
