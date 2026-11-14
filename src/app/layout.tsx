@@ -121,8 +121,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         
-<<<<<<< HEAD
-=======
+ 
+
         {/* Google tag (gtag.js) - Placed before closing </head> */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18574661384"></script>
         <script
@@ -135,7 +135,6 @@ export default function RootLayout({
             `,
           }}
         />
->>>>>>> 934ff5aa5fbb592d2226d1bb8c8051d9858ed9e5
       </head>
       <body className="font-body antialiased bg-background text-foreground selection:bg-primary/30 relative">
         {/* Google Tag Manager (noscript) */}
