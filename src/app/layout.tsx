@@ -124,14 +124,14 @@ export default function RootLayout({
 <<<<<<< HEAD
 =======
         {/* Google tag (gtag.js) - Placed before closing </head> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18561765947"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18574661384"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-18561765947');
+              gtag('config', 'AW-18574661384');
             `,
           }}
         />
